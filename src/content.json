@@ -1,0 +1,49 @@
+{
+	"global": {
+		"site-title": "Frank M. Taylor",
+		"site-subtitle": "Front End Developer"
+	},
+	"links": {
+		"code": {
+			"Stack Overflow": "http://stackoverflow.com/story/paceaux",
+			"JSFiddle": "https://jsfiddle.net/user/paceaux/",
+			"CodePen": "http://codepen.io/paceaux/",
+			"Github": "https://github.com/paceaux"
+		},
+		"social": {
+			"Twitter": "http://twitter.com/paceaux",
+			"LinkedIn": "https://www.linkedin.com/in/paceaux/",
+			"Blog": "http://blog.frankmtaylor.com",
+			"Quora": "https://quora.com/profile/Frank-Taylor-5"
+		}
+	},
+	"navigations": {
+		"work": {
+			"Tahzoo": "/work-history/tahzoo.html",
+			"Childrens": "/work-history/childrens.html",
+			"Mannatech": "/work-history/mannatech.html"
+		},
+		"site": {
+			"Portfolio": "/portfolio",
+			"Work history": "/work-history",
+			"Technologies": "/technologies",
+			"Foreign Languages": "/foreign-languages.html",
+			"Education": "/education.html"
+		},
+		"technologies": {
+			"Front-end": "/technologies/front-end.html",
+			"Back-end": "/technologies/back-end.html",
+			"Content Management": "/technologies/content-management.html"
+		},
+		"portfolio" : {
+			"CSS" : "/portfolio/css.html",
+			"Browser Experiments": "/portfolio/browser-experiments.html",
+			"jQuery Plugins": "/portfolio/jquery-plugins.html",
+			"Projects &amp; Apps": "/portfolio/projects-and-apps.html"
+		}
+	},
+	"google": {
+		"siteverification": "vWo1_L5-Zm535OiEDbNmkN5pI1GpSpHFI_T3Qpkmsvk",
+		"analytics" : "UA-19205705-1"
+	}
+}

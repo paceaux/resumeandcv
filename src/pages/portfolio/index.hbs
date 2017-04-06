@@ -1,0 +1,29 @@
+---
+title: Portfolio | CSS, HTML, JavaScript, Snippets and plugins
+description: Frank M. Taylor's coding portfolio. AKA cool stuff he made and thinks you should know about
+keywords: portfolio, CSS3, animation, CSS preprocessors, stylus, HTML5, JavaScript
+---
+<section class="portfolio">
+    <header class="s-header">
+        <h1 class="s-header__title" >Portfolio </h1>
+    </header>
+    <article class="portfolio__section">
+        <a class="portfolio__sectionLink" href="/portfolio/css.html">
+            <h2 class="portfolio__sectionTitle">CSS </h2>
+            <div class="portfolio__sectionDescription">
+                <p>Some sporty things done with CSS and CSS preprocessors. Frameworks, grid systems, or neat tricks</p>
+            </div>
+        </a>
+    </article>
+        <article class="portfolio__section">
+        <a class="portfolio__sectionLink" href="/portfolio/browser-experiments.html">
+            <h2 class="portfolio__sectionTitle">Browser Experiments </h2>
+            <div class="portfolio__sectionDescription">
+                <p>Experiments with the different "HTML5 APIs" that we have in the browser. </p>
+            </div>
+        </a>
+    </article>
+    <aside class="portfolio__footer">
+        {{>linkList (lookup content.links 'code') }}
+    </aside>
+</section>

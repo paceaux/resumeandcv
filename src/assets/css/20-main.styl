@@ -1,0 +1,28 @@
+@require '../imports'
+@require "10-generic.css"
+
+@keyframes fadein {
+  0% {
+    color: rgba(0,0,0,0.01);
+  }
+
+  100% {
+    color: rgba(colorBaseDarkest, colorBaseDarkest, colorBaseDarkest, 1);
+  }
+}
+
+html {
+}
+
+/*====================
+    LAYOUT
+====================*/
+
+.g-header, 
+.g-footer,
+.g-main {
+    display: flex;
+    width: 80%;
+    max-width: 50em;
+    margin: 0 auto;
+}

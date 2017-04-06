@@ -1,0 +1,144 @@
+/*====================
+    OBJECTS
+====================*/
+
+ /*==========
+     #TABLE
+ ==========*/
+/*=== table ===
+    __head
+    __body
+    __row
+        --header
+    __cell
+        --heading
+        --company
+    __caption
+    
+    --history
+    --education
+*/
+
+.table {
+    width: 100%
+}
+
+.table__row--header th{
+    border-bottom: 2px solid colorNeutralDarkest
+}
+
+ /*==========
+     #LISTS
+ ==========*/
+
+/*=== lists ===
+    __listContainer
+    
+    --col
+    --row
+*/
+
+.lists {
+    display: flex;
+}
+
+.lists--col {
+    flex-direction: column;
+}
+
+.lists--row {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lists__listContainer {
+    font-size: .8em;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 24%
+    background: rgba(colorBaseDarkest,colorBaseDarker,colorBaseLightest,.1);
+    margin: .618em;
+}
+
+/*=== .list ===
+    __item
+    __itemLink
+    __title
+    
+    --typeCircle
+    --typeNone
+    --links
+*/
+.list--typeCircle {
+    list-style-type: circle;
+}
+
+.list--typeNone {
+    list-style-type: none;
+}
+
+.list--links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .list__itemLink {
+        color: inherit;
+
+        &:hover, &:focus {
+            color: colorNeutralDarker;
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+
+
+
+/*===============
+    #NAV
+===============*/
+/*=== nav ===
+    __list
+    __listItem
+    __itemLink
+    __element
+    
+    --sub
+*/
+
+.nav {
+
+}
+
+.nav__list{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.nav--sub .nav__list {
+    font-size: .8em;
+    flex-direction: row;
+    padding-right: 0;
+}
+
+.nav__listItem {
+}
+
+/*===============
+    #icon
+===============*/
+
+.icon {
+    &::before {
+        content: ' ';
+        display: inline-block;
+        vertical-align: -.75em;
+        line-height: 1;
+        width: 2em;
+        height: 2em;
+        margin-right: .618em;
+        background-repeat: no-repeat;
+    }
+}

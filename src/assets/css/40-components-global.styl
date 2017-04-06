@@ -1,0 +1,92 @@
+/*====================
+    GLOBAL COMPONENTS
+====================*/
+
+ /*==========
+    #GlOBAL #HEADER
+ ==========*/
+/*=== g-header ===
+    __hgroup
+    __title
+    __titleLink
+    __subtitle
+    __element
+*/
+
+.g-header {
+    justify-content: space-between;
+}
+
+.g-header__title {
+    line-height: 1;
+    padding: 5px 10px;
+    border: 5px solid;
+    margin-bottom: 0;
+}
+
+.g-header__titleLink {  
+    color: inherit;
+
+    &:hover, &:focus, &:active {
+        border-bottom: transparent
+    }
+}
+
+ /*==========
+    #GlOBAL #NAV
+ ==========*/
+
+/*=== g-nav ===
+    __list
+    __listItem
+    __listItemLink
+    
+*/
+.g-nav__list {
+    list-style: none;
+    padding: 0;
+}
+
+.g-nav__listItem {
+    text-align: right;
+    line-height: 1;
+    margin: 0 0 .2em 0;
+}
+
+/*===============
+   #GLOBAL #FOOTER
+===============*/
+
+/*=== g-footer ===
+    __legal
+    __link
+    __element
+    __element
+    
+*/
+
+.g-footer {
+    justify-content: space-between;
+    border-top: 1px solid #d8d8d8;
+}
+
+.g-footer__link {
+    font-size: .618em;
+}
+
+/*===============
+    #GlOBAL #MAIN
+===============*/
+
+.g-main {
+    animation-name: fadein;
+    animation-duration: .75s;
+    animation-iteration-count: 1
+    animation-timing-function: ease-in;
+    animation-direction: linear;
+}
+
+.g-main {
+    flex-direction: column;
+    min-height: 70vh;
+}

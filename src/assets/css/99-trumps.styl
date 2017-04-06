@@ -1,0 +1,36 @@
+/*====================
+    TRUMPS
+====================*/
+
+.collapsed {
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease-in;
+}
+
+.is-active{
+    border-bottom: 1px solid !important;
+}
+
+@keyframes unlock {
+    0% {
+        background-color: rgba(colorBaseLighter, colorBaseDarker,colorBaseDarker, .1)
+    }
+
+    50% {
+        background-color: rgba(colorBaseLighter, colorBaseDarkest, colorBaseDarkest, .7)
+    }
+
+    100% {
+        background-color: rgba(colorBaseLighter, colorBaseDarker,colorBaseDarker, .1)
+    }
+}
+
+.is-unlocked {
+    animation-name: unlock;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+    animation-direction: linear;
+}

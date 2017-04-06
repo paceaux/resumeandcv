@@ -1,0 +1,9 @@
+<nav class="g-nav" role="navigation">
+    <ul class="g-nav__list">
+        {{#each content.navigations.site}}
+        <li class="g-nav__listItem">
+            <a href="{{this}}" class="g-nav__listItemLink">{{@key}}</a>
+        </li>
+        {{/each}}
+    </ul>     
+</nav>

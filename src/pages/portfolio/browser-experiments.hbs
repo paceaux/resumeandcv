@@ -1,0 +1,48 @@
+---
+title: Browser Experiments
+description: Experiments with HTML5 and browser APIs
+keywords: HTML5, Speech Synthesis, Speech recognition, Canvas
+---
+<section class="portfolio__section ">
+        <header class="portfolio__sectionHeader">
+            <h2 class="portfolio__sectionTitle">Browser Experiments</h2>
+            <div class="portfolio__sectionDescription">
+                <p>Experiments with HTML5 APIs and browser technologies</p>
+            </div>
+        </header>
+        <article class="portfolioItem">
+            <header class="portfolioItem__header">
+                <h3 class="portfolioItem__title">Speech Synthesis</h3>
+                <div class="portfolioItem__description">
+                    <p>This is one of the more fun things; getting the browser to talk. A very basic experiment of playing with the speech controls for the browser. This would be a great w</p>
+                </div>
+            </header>
+            <iframe class="portfolioItem__demo" src="//jsfiddle.net/Paceaux/r5t0n193/embedded/result/"></iframe>
+        </article>
+        <article class="portfolioItem">
+            <header class="portfolioItem__header">
+                <h3 class="portfolioItem__title">Canvas Bootstrap</h3>
+                <div class="portfolioItem__description">
+                    <p>Canvas is a lot to work with, especially if you need to start doing animations or manipulations</p>
+
+                    <p>This is a "bootstrap" that I like to use for some common Canvas drawings and effects. It sizes itself, sets up the animation loop, and can even draw some images. </p>
+                </div>
+            </header>
+            <iframe class="portfolioItem__demo" src="//jsfiddle.net/Paceaux/0oompa0x/embedded/js,result"></iframe>
+        </article>
+        <article class="portfolioItem">
+            <header class="portfolioItem__header">
+                <h3 class="portfolioItem__title">Tablemaker</h3>
+                <div class="portfolioItem__description">
+                    <p>Making HTML tables is <em>hard</em>. And WYSIWGs always fall short on features. Part of their problem is that they don't first rely on the Table API that exists in the browser. </p>
+
+                    <p>This is actually a Tablemaking API that's a wrapper for the DOM's table API. It's also a companion UI. You can generate valid HTML tables from JSON and from a <em>somewhat</em> easy-to-use interface. On Github you can even find documentation on the API. This has been a labor of love for many years. </p>
+                </div>
+                <a class="portfolioItem__repoLink" href="https://github.com/paceaux/Tablemaker" target="_blank">Github Repo</a>
+            </header>
+            <iframe class="portfolioItem__demo" src="//jsfiddle.net/Paceaux/v5hzsg6z/9/embedded/js,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        </article>
+        <aside class="portfolio__codeLinks">
+            {{>linkList (lookup content.links 'code') }}
+        </aside>
+    </section>

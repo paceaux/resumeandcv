@@ -1,0 +1,70 @@
+---
+title: CSS frameworks, experiments, and tricks 
+description: Frank M. Taylor's experiments with CSS3
+keywords: CSS3, Typography, Stylus, CSS Animations
+---
+<section class="portfolio__section ">
+        <header class="portfolio__sectionHeader">
+            <h2 class="portfolio__sectionTitle">CSS and CSS Preprocessors</h2>
+            <div class="portfolio__sectionDescription">
+                <p>Some sporty things done with CSS and CSS preprocessors. Frameworks, grid systems, or neat tricks
+            </div>
+        </header>
+        <article class="portfolioItem">
+            <header class="portfolioItem__header">
+                <h3 class="portfolioItem__title">Typography Baseline</h3>
+                <div class="portfolioItem__description">
+                    <p>What goes after your normalize or reset, but before you really start working on your layout and content components? What do you call the thing that actually <em>establishes the baseline typography</em>? That's what this is; a baseline for your typography. My blog uses this, as well as this site. </p>
+                </div>
+                <a class="portfolioItem__repoLink" href="https://github.com/paceaux/typography-baseline" target="_blank">Github Repo</a>
+            </header>
+            <iframe class="portfolioItem__demo" src="http://codepen.io/paceaux/full/grKWWe/"></iframe>
+        </article>
+        <article class="portfolioItem">
+            <header class="portfolioItem__header">
+                <h3 class="portfolioItem__title">Stylus-Powered Color Palette</h3>
+                <div class="portfolioItem__description">
+                    <p>What do you do if you're not great at creating a color palette? If you're a developer, you create a configurable color palette in Stylus. This has been used in one or two side projects for creating a color palette that can change on a dime. </p>
+
+                    <p>Part of the magic of the Stylus Color Palette is the class naming convention. It uses a semantic naming convention rather than a descriptive one. i.e. colors are called <code>.colorWarmerDarkest</code> or <code>.colorCool</code>, whose names can still be applicable even if the colors shift. </p>
+                </div>
+            </header>
+            <iframe class="portfolioItem__demo" src="http://codepen.io/paceaux/full/XdxQza/"></iframe>
+        </article>
+        <article class="portfolioItem">
+            <header class="portfolioItem__header">
+                <h3 class="portfolioItem__title">Media Manager CSS Tricks</h3>
+                <div class="portfolioItem__description">
+                    <p>Media Manager is a product owned by SDL. It's a CDN and API that distributes videos and images.  </p>
+
+                    <p> This was part of a submission in an SDL-hosted hackathon. It's a set of CSS classes that can be applied to videos for fun or profit</p>
+                </div>
+                <a class="portfolioItem__repoLink" href="https://github.com/paceaux/Media-Manager-Plugins-for-Tridion" target="_blank">Github Repo</a>
+            </header>
+            <iframe class="portfolioItem__demo" src="//jsfiddle.net/Paceaux/brut4gm0/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        </article>
+        <article class="portfolioItem">
+            <header class="portfolioItem__header">
+                <h3 class="portfolioItem__title">Stacking Contexts</h3>
+                <div class="portfolioItem__description">
+                    <p>The term "stacking context" gets thrown-out a lot, but I don't think many folks realize that "stacking context" isn't really about layers or stacks, but <em>paint order</em>. And paint order can affect layout.</p>
+                    <p>It's not fun to look at, But this is a heavily-researched, in-depth explanation of how <code>transform: translate()</code> can change what <code>position:fixed</code> does. </p>
+
+                </div>
+            </header>
+            <iframe class="portfolioItem__demo" src="http://codepen.io/paceaux/full/qZdjvQ/"></iframe>
+        </article>
+        <article class="portfolioItem">
+            <header class="portfolioItem__header">
+                <h3 class="portfolioItem__title">A CSS Pendulum</h3>
+                <div class="portfolioItem__description">
+                    <p>When CSS3 animations first came out, people experimented with lots of different tricks. This is a pendulum swinging with just CSS</p>
+
+                </div>
+            </header>
+                <iframe class="portfolioItem__demo" src="//jsfiddle.net/at2zs/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        </article>
+        <aside class="portfolio__codeLinks">
+            {{>linkList (lookup content.links 'code') }}
+        </aside>
+    </section>

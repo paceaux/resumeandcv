@@ -1,0 +1,9 @@
+<nav class="nav nav--sub">
+    <ul class="nav__list">
+            {{#each this}}
+                <li class="nav__listItem">
+                    <a class="nav__listItemLink" href="{{this}}">{{@key}}</a> 
+                </li>
+            {{/each}}
+    </ul>
+</nav>
