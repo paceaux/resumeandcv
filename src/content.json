@@ -19,6 +19,7 @@
 	},
 	"navigations": {
 		"work": {
+			"Exlrt": "/work-history/exlrt.html",
 			"Tahzoo": "/work-history/tahzoo.html",
 			"Childrens": "/work-history/childrens.html",
 			"Mannatech": "/work-history/mannatech.html"
