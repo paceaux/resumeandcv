@@ -2,6 +2,7 @@
   "name": "resume",
   "version": "0.0.1",
   "description": "Frank M. Taylor's online resume and website",
+  "repository": "https://github.com/paceaux/resumeandcv.git",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
