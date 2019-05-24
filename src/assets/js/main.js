@@ -1,5 +1,8 @@
 
-
+/**
+ * FMT is the container IIFE that contains all of my modules
+ * my modules are also IIFEs
+ */
 const fmt = (function fmtIIFE() {
     const modules = new Map();
 
@@ -22,7 +25,7 @@ const fmt = (function fmtIIFE() {
             throw new Error('Dude, why would I name a module that?');
         }
 
-        if (!module.has(moduleName)) {
+        if (!modules.has(moduleName)) {
             throw new Error(`${moduleName} got noped pretty hard. Were you looking for undefined, null, or NaN?`);
         }
 
@@ -116,6 +119,11 @@ fmt.addModule((function messagesIIFE() {
     const bigMsgStyle = `${regMsgStyle} font-size: 4em;`;
     const messages = new Map();
 
+    /**
+     *  Message class
+     * @param {string} text message text to display
+     * @param {string} style css styles for message in the console
+     */
     function Message(text, style = regMsgStyle) {
         this.text = text;
         this.style = style;
@@ -130,11 +138,13 @@ fmt.addModule((function messagesIIFE() {
      * @param {string} messageName Displays the name of a saved message
      */
     function showMessage(messageName) {
-        // eslint-disable-next-line no-console
-        if (!messages.has(messageName)) console.error(`${messageName} not in approved set of messages. Were you trying to send a message?`);
-
-        // eslint-disable-next-line no-console
-        console.info(messages.get(messageName.me));
+        if (!messages.has(messageName)) {
+            throw new Error(`${messageName} not in approved set of messages. Were you trying to send a message?`);
+        } else {
+            const message = messages.get(messageName);
+            // eslint-disable-next-line no-console
+            console.info(message.message, message.style);
+        }
     }
 
     /**
@@ -170,7 +180,9 @@ fmt.addModule((function lockerIIFE() {
 
     const evtCbs = {
         tracker: (evt) => {
-            if (evt.keyCode === keys[index++]) {
+            const nextKey = keys[index += 1];
+
+            if (evt.keyCode === nextKey) {
                 if (index === keys.length) {
                     document.removeEventListener('keydown', evtCbs.tracker);
                     document.body.classList.add('is-unlocked');
