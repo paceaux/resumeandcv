@@ -1,7 +1,8 @@
 /**
   gulpfile.js
   ===========
-  Individual Gulp tasks go in the tasks folder. New tasks go there. Each task should start with this:
+  Individual Gulp tasks go in the tasks folder.
+  New tasks go there. Each task should start with this:
         'use strict';
 
         const config = require('../config').assemble;

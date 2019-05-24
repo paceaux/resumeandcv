@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 
-const config = require('../config').watch;
 const gulp = require('gulp');
+const config = require('../config').watch;
 
 gulp.task('watch', () => {
     gulp.watch(config.assemble, ['assemble', 'sitemap']);
