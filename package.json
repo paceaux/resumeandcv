@@ -5,7 +5,8 @@
   "repository": "https://github.com/paceaux/resumeandcv.git",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/assets/js/** gulp/**/*.js gulpfile.js",
+    "test": "npm run lint",
     "build": "gulp build"
   },
   "keywords": [
