@@ -1,37 +1,39 @@
 
 
-const fmt = (function () {
-    const modules = [];
+const fmt = (function fmtIIFE() {
+    const modules = new Map();
 
-    /**
- * @param {function} module. It's an IIFE. But, functions are technically objects. So...
- */
+    /** adds a module to a private Map of modules
+    * @param {function} module function is an iife but could also just be a vanilla object
+    */
     function addModule(module) {
-        modules.push(module);
+        if (!module.prototype.hasOwnProperty.call(module, 'name')) throw new Error('Dude you gotta name your module');
+
+        modules.add(module.name, module);
     }
 
-    /**
- * @param {string} moduleName The name of the module
- * @return {object} The module requested, or throws an error
- */
+    /** gets a modules from a private map of modules
+    * @param {string} moduleName The name of the module
+    * @return {object} The module requested, or throws an error
+    */
     function getModule(moduleName) {
-        let module;
-
-        modules.forEach((mod) => {
-            if (mod.hasOwnProperty('moduleName') && mod.moduleName === moduleName) module = mod;
-        });
-
-        try {
-            if (typeof module === 'undefined') throw new Error(`${moduleName} got noped pretty hard. Were you looking for ${(moduleName === 'undefined' ? 'null' : moduleName === 'null' ? 'more nopes' : 'null')}?`);
-            return module;
-        } catch (err) {
-            console.error(err);
+        if (moduleName === null || moduleName === undefined) {
+            throw new Error('Dude, why would I name a module that?');
         }
+
+        if (!module.has(moduleName)) {
+            throw new Error(`${moduleName} got noped pretty hard. Were you looking for undefined, null, or NaN?`);
+        }
+
+        return modules.get(moduleName);
     }
 
+    /** initializes all of the modules
+     * @return voids
+     */
     function initialize() {
-        modules.forEach((module) => {
-            if (module.hasOwnProperty('init')) module.init();
+        modules.values().forEach((module) => {
+            if (module.prototype.hasOwnProperty.call(module, 'init')) module.init();
         });
     }
 
