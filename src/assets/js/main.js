@@ -7,9 +7,10 @@ const fmt = (function fmtIIFE() {
     * @param {function} module function is an iife but could also just be a vanilla object
     */
     function addModule(module) {
-        if (!module.prototype.hasOwnProperty.call(module, 'name')) throw new Error('Dude you gotta name your module');
+        // eslint-disable-next-line no-prototype-builtins
+        if (!module.hasOwnProperty('moduleName')) throw new Error('Dude you gotta name your module');
 
-        modules.add(module.name, module);
+        modules.set(module.moduleName, module);
     }
 
     /** gets a modules from a private map of modules
@@ -32,8 +33,9 @@ const fmt = (function fmtIIFE() {
      * @return voids
      */
     function initialize() {
-        modules.values().forEach((module) => {
-            if (module.prototype.hasOwnProperty.call(module, 'init')) module.init();
+        modules.forEach((module) => {
+            // eslint-disable-next-line no-prototype-builtins
+            if (module.hasOwnProperty('init')) module.init();
         });
     }
 
@@ -46,7 +48,7 @@ const fmt = (function fmtIIFE() {
 
 
 /*
-fmt.addModule( (function () {
+fmt.addModule( (function moduleIIFE() {
 
     const selectors = {
 
@@ -73,7 +75,7 @@ fmt.addModule( (function () {
 */
 
 
-fmt.addModule((function () {
+fmt.addModule((function navigationIIFE() {
     const selectors = {
         navItems: '.g-nav, .nav--sub',
     };
@@ -109,55 +111,48 @@ fmt.addModule((function () {
     };
 })());
 
-fmt.addModule((function () {
+fmt.addModule((function messagesIIFE() {
     const regMsgStyle = 'font-family: Helvetica; font-weight: bold; color: #333;';
     const bigMsgStyle = `${regMsgStyle} font-size: 4em;`;
-    const messages = {
-        unlocked: {
-            message: 'Website: Unlocked',
-            styles: bigMsgStyle,
-        },
-        receiveMessage: {
-            message: 'Message Received:',
-            styles: regMsgStyle,
-        },
-    };
+    const messages = new Map();
 
-    function addStyleParamToMessages() {
-        for (const message in messages) {
-            const msgObj = messages[message];
+    function Message(text, style = regMsgStyle) {
+        this.text = text;
+        this.style = style;
 
-            if (msgObj.hasOwnProperty('styles')) msgObj.message = `%c ${msgObj.message}`;
-        }
+        this.message = `%c ${text}`;
+
+        return this;
     }
+
     /**
- *
- * @param {string} messageName Displays the name of a saved message
- */
+     *
+     * @param {string} messageName Displays the name of a saved message
+     */
     function showMessage(messageName) {
-        try {
-            const message = Object.keys(messages[messageName]).map((k) => messages[messageName][k]);
+        // eslint-disable-next-line no-console
+        if (!messages.has(messageName)) console.error(`${messageName} not in approved set of messages. Were you trying to send a message?`);
 
-            console.info(...message);
-        } catch (err) {
-            console.error(`${messageName} not in approved set of messages. Were you trying to send a message?`);
-        }
+        // eslint-disable-next-line no-console
+        console.info(messages.get(messageName.me));
     }
 
     /**
- *
- * @param {string} messageText text being sent into the consoleMessenger
- * @returns {string} could depend based on the message (but someone looking at this code may find my email address)
- */
+     *
+     * @param {string} messageText text being sent into the consoleMessenger
+     * @returns {string} could depend based on the message
+     */
     function receiveMessage(messageText) {
         showMessage('receiveMessage');
+        // eslint-disable-next-line no-console
         console.info(`%c ${messageText}`, `${regMsgStyle} margin-left: 2em; font-style: italic`);
 
         // logic goes here for sending messages back and forth to .... ¿one really bored person?
     }
 
     function initialize() {
-        addStyleParamToMessages();
+        messages.set('unlocked', new Message('Website: Unlocked', bigMsgStyle));
+        messages.set('receiveMessage', new Message('Message Received:', regMsgStyle));
     }
 
     initialize();
@@ -169,7 +164,7 @@ fmt.addModule((function () {
     };
 })());
 
-fmt.addModule((function () {
+fmt.addModule((function lockerIIFE() {
     const keys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
     let index = 0;
 
@@ -199,7 +194,7 @@ fmt.addModule((function () {
     };
 })());
 
-fmt.addModule((function () {
+fmt.addModule((function footerIIFE() {
     const selectors = {
         time: '.js-copyright-time',
     };
