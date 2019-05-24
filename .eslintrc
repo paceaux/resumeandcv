@@ -1,3 +1,14 @@
 {
-    "extends": "airbnb-base"
+    "extends": "airbnb-base",
+    "rules" : {
+        "indent": ["warn", 4],
+        "arrow-parens": "off"
+    },
+    "globals": {
+        "document": true,
+        "localStorage": true,
+        "navigator" : true,
+        "window": true,
+        "fmt": true
+    }
 }
