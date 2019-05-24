@@ -1,9 +1,11 @@
 {
   "name": "resume",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Frank M. Taylor's online resume and website",
-  "repository": "https://github.com/paceaux/resumeandcv.git",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paceaux/resumeandcv.git"
+  },
   "scripts": {
     "lint": "eslint src/assets/js/** gulp/**/*.js gulpfile.js",
     "test": "npm run lint",
@@ -14,7 +16,10 @@
     "static",
     "resume"
   ],
-  "author": "Frank M. Taylor",
+  "author": {
+    "name": "Frank M. Taylor",
+    "email": "frank.m.taylor08@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "assemble": "^0.24.3",
