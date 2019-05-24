@@ -8,10 +8,10 @@
         const gulp = require('gulp');
 
 
-  Use  gulp/tasks/default.js to specify default tasks 
+  Use  gulp/tasks/default.js to specify default tasks
 
 */
 
-var requireDir = require('require-dir');
+const requireDir = require('require-dir');
 
 requireDir('./gulp/tasks', { recurse: true });

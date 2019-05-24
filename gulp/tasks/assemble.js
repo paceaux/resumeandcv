@@ -1,13 +1,14 @@
-'use strict';
 
-const config = require('../config').assemble;
+
 const gulp = require('gulp');
 const assemble = require('assemble');
 const extname = require('gulp-extname');
+const config = require('../config').assemble;
+
 const assembler = assemble();
 
 
-gulp.task('load', (cb)=>{
+gulp.task('load', (cb) => {
     assembler.data(config.content);
     assembler.option('layout', 'default');
     assembler.partials(config.partials);
@@ -16,9 +17,7 @@ gulp.task('load', (cb)=>{
     cb();
 });
 
-gulp.task('assemble', ['load'], ()=>{
-    return assembler.toStream('pages')
-        .pipe(assembler.renderFile())
-        .pipe(extname())
-        .pipe(assembler.dest(config.dest));
-});
+gulp.task('assemble', ['load'], () => assembler.toStream('pages')
+    .pipe(assembler.renderFile())
+    .pipe(extname())
+    .pipe(assembler.dest(config.dest)));
