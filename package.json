@@ -16,7 +16,8 @@
   "author": "Frank M. Taylor",
   "license": "MIT",
   "devDependencies": {
-    "assemble": "^0.23.0",
+    "assemble": "^0.24.3",
+    "eslint": "^5.16.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-extname": "^0.2.2",
