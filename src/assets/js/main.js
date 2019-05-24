@@ -201,4 +201,35 @@ fmt.addModule ( (function() {
     }
 })() );
 
+fmt.addModule( (function () {
+
+    const selectors = {
+        time: '.js-copyright-time'
+    };
+
+    function getYearString() {
+        const date = new Date();
+
+        return date.getFullYear();
+    }
+
+    function updateCopyrightYear(element) {
+        if (!element) return;
+        const year = getYearString();
+
+        element.setAttribute('datetime', year);
+    }
+
+    function initialize() {
+        const copyRightYearElement = document.querySelector(selectors.time);
+
+        updateCopyrightYear(copyRightYearElement);
+    };
+
+    return {
+        init: initialize,
+        moduleName: 'footer'
+    }
+})() );
+
 fmt.init();
