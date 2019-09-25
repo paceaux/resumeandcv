@@ -34,7 +34,8 @@
 		"technologies": {
 			"Front-end": "/technologies/front-end.html",
 			"Back-end": "/technologies/back-end.html",
-			"Content Management": "/technologies/content-management.html"
+			"Content Management": "/technologies/content-management.html",
+			"Devops": "/technologies/devops.html"
 		},
 		"portfolio" : {
 			"CSS" : "/portfolio/css.html",
