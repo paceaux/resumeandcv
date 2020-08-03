@@ -1,6 +1,14 @@
 const regMsgStyle = 'font-family: Helvetica; font-weight: bold; color: #333;';
 const bigMsgStyle = `${regMsgStyle} font-size: 4em;`;
 
+/**
+ * @class Message
+ * @description a messages sent to/from the console
+ *
+ * @property {String} text
+ * @property {String} style
+ * @property {String} message
+ */
 class Message {
     constructor(text, style = regMsgStyle) {
         this.text = text;

@@ -1,6 +1,14 @@
+/**
+ * @class Locker
+ * @description who doesn't like Konami?
+ *
+ */
 // I'm not going to use Babel for a tiny static site
 // eslint-disable-next-line no-unused-vars
 class Locker {
+    /**
+     * @param  {array} keys=[up up down down...]
+     */
     constructor(keys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]) {
         this.keys = keys;
         this.keyIndex = 0;
