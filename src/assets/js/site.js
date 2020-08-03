@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 class Site {
     constructor(globals, modules = new Set()) {
         this.globals = new Set(globals);
@@ -11,20 +12,20 @@ class Site {
             try {
                 global.initialize();
             } catch (globalErr) {
-                console.info("error initializing a global");
+                console.info('error initializing a global');
                 console.error(globalErr);
             }
         });
     }
 
     initialize(modules) {
-        modules.forEach((moduleClass) => {
+        modules.forEach((ModuleClass) => {
             try {
-                const module = new moduleClass();
+                const module = new ModuleClass();
                 module.initialize();
                 this.modules.add(module);
             } catch (moduleErr) {
-                console.info("error initializing a module");
+                console.info('error initializing a module');
                 console.error(moduleErr);
             }
         });
