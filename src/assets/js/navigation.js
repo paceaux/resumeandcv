@@ -1,4 +1,5 @@
-
+// I'm not going to use Babel for a tiny static site
+// eslint-disable-next-line no-unused-vars
 class Navigation {
     static get selectors() {
         return {

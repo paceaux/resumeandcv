@@ -1,3 +1,5 @@
+// I'm not going to use Babel for a tiny static site
+// eslint-disable-next-line no-unused-vars
 class Locker {
     constructor(keys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]) {
         this.keys = keys;

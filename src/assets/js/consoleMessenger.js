@@ -12,6 +12,8 @@ class Message {
     }
 }
 
+// I'm not going to use Babel for a tiny static site
+// eslint-disable-next-line no-unused-vars
 class Messenger {
     constructor() {
         this.messages = new Map();

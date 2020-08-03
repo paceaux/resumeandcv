@@ -32,6 +32,10 @@ class Site {
     }
 }
 
+// if I used Webpack or babel I could properly do imports.
+// I won't. I'm lazy.
+// eslint-disable-next-line no-undef
 const fmt = new Site([Footer, Navigation]);
+// eslint-disable-next-line no-undef
 fmt.initialize([Messenger, Locker]);
 window.fmt = fmt;

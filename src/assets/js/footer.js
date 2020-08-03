@@ -1,3 +1,5 @@
+// I'm not going to use Babel for a tiny static site
+// eslint-disable-next-line no-unused-vars
 class Footer {
     static get selectors() {
         return {
@@ -16,6 +18,8 @@ class Footer {
         const year = Footer.getYearString();
 
         element.setAttribute('datetime', year);
+        // this isn't an object. it's a Node
+        // eslint-disable-next-line no-param-reassign
         element.innerText = year;
     }
 

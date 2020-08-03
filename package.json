@@ -7,7 +7,9 @@
     "url": "https://github.com/paceaux/resumeandcv.git"
   },
   "scripts": {
-    "lint": "eslint src/assets/js/** gulp/**/*.js gulpfile.js",
+    "lint:js": "eslint src/**/*.js -f table && eslint src/**/*.js -f table -o reports/js.lint.txt",
+    "lint:js:fix": "eslint src/**/*.js --fix",
+    "lint": "eslint src/assets/js/** gulpfile.js/**/*.js",
     "test": "npm run lint",
     "build": "gulp build"
   },
