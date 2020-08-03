@@ -10,6 +10,10 @@ const bigMsgStyle = `${regMsgStyle} font-size: 4em;`;
  * @property {String} message
  */
 class Message {
+    /**
+     * @param  {String} text
+     * @param  {String} style=regMsgStyle
+     */
     constructor(text, style = regMsgStyle) {
         this.text = text;
         this.style = style;
@@ -28,7 +32,7 @@ class Messenger {
     }
 
     /**
-     *
+     * Shows a pre-set message in console
      * @param {string} messageName Displays the name of a saved message
      */
     static showMessage(messageName) {
@@ -42,7 +46,7 @@ class Messenger {
     }
 
     /**
-     *
+     * gets a message from console?
      * @param {string} messageText text being sent into the consoleMessenger
      * @returns {string} could depend based on the message
      */
