@@ -49,7 +49,7 @@ module.exports = {
         src: `${dest}/**/*.html`,
         opts: {
             siteUrl: 'http://frankmtaylor.com',
-            changefreq: 'weekly',
+            changefreq: 'monthly',
         },
     },
 
