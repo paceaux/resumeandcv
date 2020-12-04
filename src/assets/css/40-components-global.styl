@@ -25,12 +25,6 @@
     --biggestTitleSize: 2.2rem;
 }
 
-@media screen and (min-width: 768px) {
-    .g-header {
-        grid-template-areas: "branding . nav" "branding . nav";
-    }   
-}
-
 .g-header__hgroup {
     grid-area: branding;
 }
@@ -46,11 +40,25 @@
     margin-bottom: 0;
 }
 
+.g-header__subtitle {
+    text-align: center;    
+}
+
 .g-header__titleLink {  
     color: inherit;
 
     &:hover, &:focus, &:active {
         border-bottom: transparent
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .g-header {
+        grid-template-areas: "branding . nav" "branding . nav";
+    }
+
+    .g-header__subtitle {
+        text-align: left;    
     }
 }
 
