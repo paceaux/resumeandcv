@@ -82,6 +82,9 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
 
     .list__itemLink {
         color: inherit;
@@ -120,10 +123,21 @@
 .nav--sub .nav__list {
     font-size: .8em;
     flex-direction: row;
+    flex-wrap: wrap;
     padding-right: 0;
+    margin-top: .618rem;
+    border-top: 1px solid;
 }
 
-.nav__listItem {
+@media screen and (min-width: 768px) {
+    .nav--sub {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav--sub .nav__list {
+        max-width: 50%;
+    }    
 }
 
 /*===============

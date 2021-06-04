@@ -13,8 +13,24 @@
     __element
 */
 
+.g-header,
+.g-footer {
+    display: grid;
+    grid-template-columns: repeat(var(--globalColumns), auto);
+    grid-template-rows: auto auto;
+}
+
 .g-header {
-    justify-content: space-between;
+    grid-template-areas: "branding branding branding" "nav nav nav";
+    --biggestTitleSize: 2.2rem;
+}
+
+.g-header__hgroup {
+    grid-area: branding;
+}
+
+.g-nav {
+    grid-area: nav;
 }
 
 .g-header__title {
@@ -24,11 +40,25 @@
     margin-bottom: 0;
 }
 
+.g-header__subtitle {
+    text-align: center;    
+}
+
 .g-header__titleLink {  
     color: inherit;
 
     &:hover, &:focus, &:active {
         border-bottom: transparent
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .g-header {
+        grid-template-areas: "branding . nav" "branding . nav";
+    }
+
+    .g-header__subtitle {
+        text-align: left;    
     }
 }
 
@@ -42,16 +72,33 @@
     __listItemLink
     
 */
+
 .g-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-right: 1rem;
     list-style: none;
     padding: 0;
 }
 
+
 .g-nav__listItem {
     text-align: right;
     line-height: 1;
-    margin: 0 0 .2em 0;
+    margin: .618em 1rem 0 0;
 }
+
+@media screen and (min-width: 768px) {
+    .g-nav__list {
+        display: block;    
+    }
+
+    .g-nav__listItem {
+        margin: 0 0 .2em 0;
+    }
+}
+
 
 /*===============
    #GLOBAL #FOOTER
@@ -59,6 +106,7 @@
 
 /*=== g-footer ===
     __legal
+    __links
     __link
     __element
     __element
@@ -66,14 +114,39 @@
 */
 
 .g-footer {
-    justify-content: space-between;
     border-top: 1px solid #d8d8d8;
+    grid-template-areas: "legal legal legal" ". links .";
+}
+
+.g-footer__legal {
+    grid-area: legal;
+    text-align: center;
+}
+
+.g-footer__links {
+    grid-area: links;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .g-footer__link {
     font-size: .618em;
 }
 
+
+@media screen and (min-width: 768px) {
+    .g-footer {
+        grid-template-areas: "legal . links" ". . .";
+    }
+
+    .g-footer__legal {
+        text-align: left;
+    }
+    .g-footer__links {
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
 /*===============
     #GlOBAL #MAIN
 ===============*/
@@ -88,5 +161,4 @@
 
 .g-main {
     flex-direction: column;
-    min-height: 70vh;
 }
