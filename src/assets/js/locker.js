@@ -14,19 +14,29 @@ class Locker {
         this.keyIndex = 0;
     }
 
-    trackerCallback(event) {
-        const nextKey = this.keys[this.keyIndex += 1];
+    static unlock() {
+        document.body.classList.add('is-unlocked');
+        window.sessionStorage.setItem('locker-unlocked', new Date());
+    }
 
-        if (event.keyCode === nextKey) {
+    static lock() {
+        document.body.classList.remove('is-unlocked');
+        window.sessionStorage.removeItem('locker-unlocked');
+    }
+
+    trackerCallback(event) {
+        const currentKey = this.keys[this.keyIndex];
+        if (event.keyCode === currentKey) {
+            this.keyIndex += 1;
             if (this.keyIndex === this.keys.length) {
                 document.removeEventListener('keydown', this.trackerCallback);
-                document.body.classList.add('is-unlocked');
+                Locker.unlock();
             }
         }
     }
 
     bindEvents() {
-        document.addEventListener('keydown', this.trackerCallback);
+        document.addEventListener('keydown', this.trackerCallback.bind(this));
     }
 
     initialize() {
