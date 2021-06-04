@@ -1,0 +1,102 @@
+---
+title: Utilities
+description: Frank M. Taylor's favorite Utilities
+keywords: JavaScript, Azure, .net core, Python
+---
+<section class="portfolio__section ">
+    <header class="portfolio__sectionHeader">
+        <h2 class="portfolio__sectionTitle">Utilities</h2>
+        <div class="portfolio__sectionDescription">
+            <p>Things I've built to make developer life easier.</p>
+        </div>
+    </header>
+    <article class="portfolioItem">
+        <header class="portfolioItem__header">
+            <h3 class="portfolioItem__title">XLSX to JSON</h3>
+            <div class="portfolioItem__description">
+                <h4>Keywords:</h4>
+                <ul>
+                    <li>Python</li>
+                    <li>Excel</li>
+                    <li>JSON</li>
+                </ul>
+            </div>
+        </header>
+        <div class="portfolioItem__description">
+            <h4>In a nutshell:</h4>
+            <p>It's a tiny Python utility that converts an Excel document to JSON</p>
+            <p>A few years ago I was tasked with building a small single application. That was all fine, but the data
+                wasn't! I had an Excel spreadsheet with hundreds of rows that needed to get migrated into a database. So
+                I built a small utility to conver Excel spreadsheets into data, and it's now my most-starred repository.
+            </p>
+
+        </div>
+        <a class="portfolioItem__repoLink" href="https://github.com/paceaux/xlsx-to-json" target="_blank">Github
+            Page</a>
+    </article>
+    <article class="portfolioItem">
+        <header class="portfolioItem__header">
+            <h3 class="portfolioItem__title">Azure Function Bootstrap</h3>
+            <div class="portfolioItem__description">
+                <h4>Keywords:</h4>
+                <ul>
+                    <li>Azure Function</li>
+                    <li>node.js</li>
+                </ul>
+            </div>
+        </header>
+        <div class="portfolioItem__description">
+            <h4>In a nutshell</h4>
+            <p>After building quite a few Azure Functions for clients, I decided my life would be easier if I had a
+                "starter" project. So that's what this is.</p>
+            <p>This provides a small set of utilities and some configuration management, along with some patterns for
+                using Application Insights.</p>
+            <p>This also uses Microsoft's Azure Storage library, but nicely promisified. It's set for adding and
+                retrieving blob data and message queues. Table Storage is coming soon!</p>
+            <h4>Installation</h4>
+            <p>Download the repo, and delete the function folders you don't need</p>
+
+        </div>
+        <a class="portfolioItem__repoLink" href="https://github.com/paceaux/Azure-Function-Bootstrap"
+            target="_blank">Github Page</a>
+    </article>
+    <article class="portfolioItem">
+        <header class="portfolioItem__header">
+            <h3 class="portfolioItem__title">Selector Finder</h3>
+            <div class="portfolioItem__description">
+                <h4>Keywords:</h4>
+                <ul>
+                    <li>Node.js</li>
+                    <li>JavaScript</li>
+                    <li>CSS</li>
+                    <li>Puppeteer</li>
+                </ul>
+            </div>
+        </header>
+        <div class="portfolioItem__description">
+            <h4>In a nutshell:</h4>
+            <p>What do you do if you want to delete a CSS ruleset, but you don't know if it's used? Well, if you're me,
+                you build a tool that finds the selector. This is a CLI (Command Line Interface) app that can be fed a
+                site's XML file, and from that it'll scan all the pages, looking for your CSS selector.</p>
+
+            <p>But, it can do more than just find a single CSS selector. You can feed it a whole stylesheet, set how
+                much detail you want, and even get screenshots of what it finds. This is a very handy little tool for
+                front-end developers. </p>
+            <h4>Installation</h4>
+            <p>Download repository. Then run <code>npm i</code>. The CLI and/or readme will guide you from there. </p>
+            <h4>Learning More:</h4>
+            <p>I wrote <a href="https://blog.frankmtaylor.com/2021/01/19/introducing-the-selector-finder/">a blog
+                    post</a>
+                that goes into some detail about its origins and uses.</p>
+        </div>
+        <a class="portfolioItem__repoLink" href="https://github.com/paceaux/selector-finder" target="_blank">Github
+            Page</a>
+    </article>
+
+
+
+
+    <aside class="portfolio__codeLinks">
+        {{>linkList (lookup content.links 'code') }}
+    </aside>
+</section>

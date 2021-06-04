@@ -40,8 +40,7 @@
 		"portfolio" : {
 			"CSS" : "/portfolio/css.html",
 			"Browser Experiments": "/portfolio/browser-experiments.html",
-			"jQuery Plugins": "/portfolio/jquery-plugins.html",
-			"Projects &amp; Apps": "/portfolio/projects-and-apps.html"
+			"NPM": "/portfolio/npm.html"
 		}
 	},
 	"google": {
