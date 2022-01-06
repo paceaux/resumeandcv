@@ -196,9 +196,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: rgba(colorBaseDarker, colorBase, colorBaseLighter, .1);
+    background: rgba(colorBaseDarker, colorBase, colorBaseLighter, .08);
     padding: .618em 0 0 0;
+    border-radius: 2px;
     margin: 1.618em 1.618rem;
+}
+
+.portfolioItem__title {
+    text-decoration: underline;
+    text-decoration-skip-ink: all;
+    text-decoration-thickness: 1.5px;    
 }
 
 .portfolioItem__repoLink {
@@ -210,11 +217,16 @@
     }
 }
 
+.portfolioItem__description li {
+    line-height: var(--smallLineHeight);
+}
+
 .portfolioItem__demo {
-    width: 100%;
+    width: 98%;
     min-height: 600px;
     background: #fff;
     border: none;
+    margin: 0 auto;
     box-shadow: 0px 0px 1px 1px rgba(colorBaseDarkest,colorBaseDarkest,colorBaseDarkest,.4);
 }
 
