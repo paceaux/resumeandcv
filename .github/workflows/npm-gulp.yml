@@ -7,25 +7,23 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  web-deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
     
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - name: Get Latest code
+      uses: actions/checkout@v2
+      
+    - name: Use Node.js 14
+      uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '14'
 
     - name: Build project
       run: |
         npm install
-        gulp build
+        npm run build
 
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
