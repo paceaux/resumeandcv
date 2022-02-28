@@ -12,6 +12,77 @@ keywords: CSS, Typography, JavaScript, NPM, Node.js, Natural Language Processing
     </header>
     <article class="portfolioItem">
         <header class="portfolioItem__header">
+            <h3 class="portfolioItem__title">Selector Hound</h3>
+            <div class="portfolioItem__description">
+                <h4>Keywords:</h4>
+                <ul>
+                    <li>CSS</li>
+                    <li>selector</li>
+                    <li>DOM</li>
+                    <li>utility</li>
+                </ul>
+            </div>
+        </header>
+        <div class="portfolioItem__description">
+            <h4>In a nutshell</h4>
+            <p>Find a CSS selector on a website. Use a sitemap, or have it crawl. Optionally take screenshots, give you a snippet of the markup, or account for dynamic content. </p>
+            <h4>Installation</h4>
+            <p><samp>npm install -g selector-hound</samp></p>
+            <h4>Learning More:</h4>
+            <p>I wrote <a href="https://blog.frankmtaylor.com/2021/01/19/introducing-the-selector-finder/"> a blog post </a> that introduced it before it became a proper NPM package.</p>
+        </div>
+        <a class="portfolioItem__repoLink" href="https://www.npmjs.com/package/selector-hound" target="_blank">NPM Page</a>
+    </article>
+    <article class="portfolioItem">
+        <header class="portfolioItem__header">
+            <h3 class="portfolioItem__title">Isidore</h3>
+            <div class="portfolioItem__description">
+                <h4>Keywords:</h4>
+                <ul>
+                    <li>grammar</li>
+                    <li>NLP</li>
+                    <li>computational</li>
+                    <li>linguistics</li>
+                </ul>
+            </div>
+        </header>
+        <div class="portfolioItem__description">
+            <h4>In a nutshell</h4>
+            <p>Takes a sentence and identifies the grammatical elements within. Built with extensibility in mind, it
+                should be able to handle many western European languages with minimal code changes.</p>
+            <h4>Installation</h4>
+            <p><samp>npm install --save isidore</samp></p>
+            <h4>Learning More:</h4>
+            <p>I wrote <a href="https://blog.frankmtaylor.com/2018/12/19/introducing-isidore/"> a blog post </a>to
+                explain my motivations for writing Isidore and the origin of the name.</p>
+        </div>
+        <a class="portfolioItem__repoLink" href="https://www.npmjs.com/package/isidore" target="_blank">NPM Page</a>
+    </article>
+    <article class="portfolioItem">
+        <header class="portfolioItem__header">
+            <h3 class="portfolioItem__title">Berea</h3>
+            <div class="portfolioItem__description">
+                <h4>Keywords:</h4>
+                <ul>
+                    <li>Library</li>
+                    <li>ORM</li>
+                    <li>Bible</li>
+                    <li>Scripture</li>
+                    <li>API</li>
+                </ul>
+            </div>
+        </header>
+        <div class="portfolioItem__description">
+            <h4>In a nutshell</h4>
+            <p>A promise-based Node library and ORM for <a href="https://scripture.api.bible/">Scripture.api.bible</a>. It includes a <code>bibleService</code> which uses the API with some convenience methods.</code></p>
+            <p>It <strong>also</strong> includes an ORM that turns data into <var>Bible</var>, <var>Book</var>, <var>Chapter</var>, and other objects that each come with their own convenience methods and relations which make it easier to navigate scripture.</p>
+            <h4>Installation</h4>
+            <p><samp>npm install --save berea</samp></p>
+        </div>
+        <a class="portfolioItem__repoLink" href="https://www.npmjs.com/package/berea" target="_blank">NPM Page</a>
+    </article>
+    <article class="portfolioItem">
+        <header class="portfolioItem__header">
             <h3 class="portfolioItem__title">Typography Baseline</h3>
             <div class="portfolioItem__description">
                 <h4>Keywords:</h4>
@@ -26,7 +97,7 @@ keywords: CSS, Typography, JavaScript, NPM, Node.js, Natural Language Processing
             <p>A good start to your CSS typography that covers all the semantic nooks and crannies. (It's also used on
                 this site)</p>
             <h4>Installation</h4>
-            <p><code>npm install --save typography-baseline.css</code></p>
+            <p><samp>npm install --save typography-baseline.css</samp></p>
             <h4>Learning More:</h4>
             <p>I wrote <a href="https://blog.frankmtaylor.com/2019/04/16/introducing-the-typography-baseline/">a blog
                     post</a> that explains the typography baseline in greater detail. This also spent quite a bit of
@@ -35,31 +106,6 @@ keywords: CSS, Typography, JavaScript, NPM, Node.js, Natural Language Processing
             <a class="portfolioItem__repoLink" href="https://www.npmjs.com/package/typography-baseline.css" target="_blank">NPM
                 Page</a>
             </article>
-            <article class="portfolioItem">
-                <header class="portfolioItem__header">
-                    <h3 class="portfolioItem__title">Isidore</h3>
-                    <div class="portfolioItem__description">
-                        <h4>Keywords:</h4>
-                        <ul>
-                            <li>grammar</li>
-                            <li>NLP</li>
-                            <li>computational</li>
-                            <li>linguistics</li>
-                        </ul>
-                    </div>
-                </header>
-                <div class="portfolioItem__description">
-                    <h4>In a nutshell</h4>
-                    <p>Takes a sentence and identifies the grammatical elements within. Built with extensibility in mind, it
-                        should be able to handle many western European languages with minimal code changes.</p>
-                    <h4>Installation</h4>
-                    <p><code>npm install --save isidore</code></p>
-                    <h4>Learning More:</h4>
-                    <p>I wrote <a href="https://blog.frankmtaylor.com/2018/12/19/introducing-isidore/"> a blog post </a>to
-                        explain my motivations for writing Isidore and the origin of the name.</p>
-                    </div>
-                    <a class="portfolioItem__repoLink" href="https://www.npmjs.com/package/isidore" target="_blank">NPM Page</a>
-                    </article>
             <article class="portfolioItem">
                 <header class="portfolioItem__header">
                     <h3 class="portfolioItem__title">Typography Baseline.scss</h3>
@@ -77,7 +123,7 @@ keywords: CSS, Typography, JavaScript, NPM, Node.js, Natural Language Processing
                         Sass flavor
                         of the typography baseline)</p>
                     <h4>Installation</h4>
-                    <p><code>npm install --save typography-baseline.scss</code></p>
+                    <p><samp>npm install --save typography-baseline.scss</samp></p>
                     <h4>Learning More:</h4>
                     <p>I wrote <a href="https://blog.frankmtaylor.com/2019/04/16/introducing-the-typography-baseline/">a blog
                             post</a>
@@ -93,8 +139,9 @@ keywords: CSS, Typography, JavaScript, NPM, Node.js, Natural Language Processing
                     <div class="portfolioItem__description">
                         <h4>Keywords:</h4>
                         <ul>
-                            <li>SCSS</li>
+                            <li>CSS</li>
                             <li>Typography</li>
+                            <li>Table</li>
                         </ul>
                     </div>
                 </header>
@@ -103,7 +150,34 @@ keywords: CSS, Typography, JavaScript, NPM, Node.js, Natural Language Processing
                     <p>Built on Typography Baseline foundations, it gives you a good <em>small</em> set of styles for tables.
                     </p>
                     <h4>Installation</h4>
-                    <p><code>npm install --save table-baseline.css</code></p>
+                    <p><samp>npm install --save table-baseline.css</samp></p>
+                    <h4>Learning More:</h4>
+                    <p>I wrote <a href="https://blog.frankmtaylor.com/2022/01/06/introducing-the-table-baseline/">a blog
+                            post</a> that explains the table baseline in more detail. This also has a version on <a
+                            href="https://codepen.io/paceaux/pen/KKWwyMa">CodePen</a>.
+                    </p>
+                </div>
+                <a class="portfolioItem__repoLink" href="https://www.npmjs.com/package/table-baseline.css" target="_blank">NPM
+                    Page</a>
+            </article>
+            <article class="portfolioItem">
+                <header class="portfolioItem__header">
+                    <h3 class="portfolioItem__title">Form Baseline</h3>
+                    <div class="portfolioItem__description">
+                        <h4>Keywords:</h4>
+                        <ul>
+                            <li>CSS</li>
+                            <li>Typography</li>
+                            <li>Forms</li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="portfolioItem__description">
+                    <h4>In a nutshell:</h4>
+                    <p>Built on Typography Baseline foundations, it gives you a good <em>small</em> set of styles for forms.
+                    </p>
+                    <h4>Installation</h4>
+                    <p><samp>npm install --save form-baseline.css</samp></p>
                 </div>
                 <a class="portfolioItem__repoLink" href="https://www.npmjs.com/package/table-baseline.css" target="_blank">NPM
                     Page</a>

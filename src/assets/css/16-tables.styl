@@ -1,0 +1,195 @@
+/*==========
+#Table #Variables
+==========*/
+table {
+    /*=====
+        #Text #Size
+    =====*/
+    --tableBiggestTextSize: var(--biggerTextSize, 1.2em);
+    --tableBiggerTextSize: var(--bigTextSize, 1.1em);
+    --tableBaseTextSize: var(--smallTextSize, .8em);
+    --tableSmallerTextSize: var(--smallerTextSize, .75em);
+    --tableSmallestTextSize: var(--smallerTextSize, .618em);
+  
+    /* Variable to be used in td, th*/
+    --tableCellSize: var(--tableBaseTextSize);
+
+
+    /*=====
+        #Title #Size
+    =====*/
+    --tableBiggestTitleSize: var(--baseTitleSize, 1.5em);
+    --tableBiggerTitleSize: var(--biggestTextSize, 1.3em);
+    --tableBaseTitleSize: var(--tableBiggestTextSize);
+    --tableSmallerTitleSize: var(--tableBiggerTextSize);
+    --tableSmallestTitleSize: var(--tableBaseTextSize);
+    
+    /* assume for any column headers*/
+    --tableColHeaderSize: var(--tableBiggestTitleSize);
+    /* assume for any row headers*/
+    --tableRowHeaderSize: var(--tableBaseTitleSize);
+    /*used by th in the tbody, thead, tfoot*/
+    --tableHeaderSize: var(--tableRowHeaderSize);
+
+
+    /*===== 
+        #LineHeight 
+    =====*/
+    --tableBaseLineHeight: var(--smallLineHeight, 1.2);
+    --tableSmallLineHeight: 1;
+
+
+    /*===== 
+        #Font #FontFamilies #Typeface
+    =====*/
+    --tableBaseFontFamily: var(--baseFontFamily,  'Georgia','Times New Roman', 'serif');
+    --tableTitleFontFamily: var(--titleFontFamily, 'Helvetica', 'Arial', 'sans-serif');
+
+    --tableCaptionTransform: capitalize;
+    --tableCaptionFontStyle: italic;
+
+
+    /*===== 
+        #Border
+    =====*/ 
+    --tableBorderCollapse: collapse;
+    --tableBorderColor: var(--baseInlineBorderColor, rgb(192.5,192.5,192.5));
+    --tableBorderStyle: solid;
+
+    --tableCellBorderWidth: 2px;
+    --tableHeaderBorderWidth: var(--tableCellBorderWidth);
+
+
+    /*===== 
+        #Spacing
+    =====*/ 
+    --tableCellVertPadding: .4em;
+    --tableCellHorzPadding: .618em;
+    --tableTextAlign: left;
+    --tableVertAlign: middle;
+
+
+    /*=====
+        #Colors
+    =====*/
+    --tableBaseTextColor:var(--baseTextColor, rgb(55,55,55));
+
+
+    /*===== 
+        #Background
+    =====*/ 
+    --tableBodyPrimaryBgColor: transparent;
+    --tableBodyAlternatingBgColor: rgba(165,165,165, .3);
+
+    --tablePrimaryBgColor: var(--tableBodyPrimaryBgColor);
+    --tableAlternatingBgColor: var(--tableBodyAlternatingBgColor);
+}
+
+
+/*===== #TableSections #Variables
+Variables scoped for the sections of a table
+Rather than adding classes or redeclaring, 
+we have the ability to change styles by changing values of the variables
+=====*/
+thead,
+tfoot,
+tbody {
+    --borderWidth: var(--tableCellBorderWidth);
+}
+
+/* Not Necessary, but in case we want the header rows to be different from the body rows*/
+thead,
+tfoot {
+    --tablePrimaryBgColor: var(--tableBodyAlternatingBgColor);
+    --tableAlternatingBgColor: var(--tableBodyPrimaryBgColor);
+}
+
+/* thead will have bigger th and td*/
+thead {
+    --tableHeaderSize: var(--tableColHeaderSize);
+    --tableCellSize: var(--tableBiggerTextSize);
+}
+
+/* tfoot will have smaller th and td*/
+tfoot {
+    --tableHeaderSize: var(--tableSmallestTitleSize);
+    --tableCellSize: var(--tableSmallerTextSize);
+}
+
+/* tbody is the standard*/
+tbody {
+    --tableHeaderSize: var(--tableRowHeaderSize);
+    --tableCellSize: var(--tableCellSize);
+}
+
+/*=====
+#Table    
+=====*/
+table {
+    border-collapse: var(--tableBorderCollapse);
+    color: var(--tableBaseTextColor);
+    font-family: var(--tableBaseFontFamily);
+}
+
+caption {
+    font-size:  var(--tableSmallestTextSize);
+    text-transform: var(--tableCaptionTransform);
+    font-style: var(--tableCaptionFontStyle);
+}
+
+
+/*=====
+#Table #Cells   
+=====*/
+th,
+td {
+    text-align: var(--tableTextAlign);
+    vertical-align: var(--tableVertAlign);
+    line-height: var(--tableBaseLineHeight);
+    padding: var(--tableCellVertPadding);
+    border-color: var(--tableBorderColor);
+    border-style: var(--tableBorderStyle);
+}
+
+th:empty,
+td:empty {
+    padding: 0;
+    border-width: 0;
+}
+
+td {
+    font-size: var(--tableCellSize);
+    border-width: var(--borderWidth);
+}
+
+th {
+    font-family: var(--tableTitleFontFamily);
+    font-weight: bold;
+    font-size: var(--tableHeaderSize);
+    border-width: var(--tableHeaderBorderWidth);
+}
+
+th[scope="rowgroup"] {
+    font-size: var(--tableBiggestTitleSize);
+    border-width: 0;
+    padding: var(--tableCellVertPadding);
+}
+
+thead th {
+    border-bottom-width: var(--borderWidth);
+}
+
+tfoot th {
+  border-top-width: var(--borderWidth);
+}
+
+/*=====
+#Table #Rows
+=====*/
+tr {
+    background-color: var(--tablePrimaryBgColor);
+}
+
+tr:nth-child(even) {
+    background-color: var(--tableAlternatingBgColor);
+}
