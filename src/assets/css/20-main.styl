@@ -11,18 +11,46 @@
   }
 }
 
-html {
+:root {
+  --gridRail: 2%;
+  --globalColumns: 3;
+  --sectionFlow: column;
 }
 
 /*====================
     LAYOUT
 ====================*/
 
-.g-header, 
-.g-footer,
+body {
+  display: grid;
+  grid-template-columns: var(--gridRail) repeat(4, 1fr) var(--gridRail);
+  grid-template-rows: 1fr auto 10%;
+  grid-template-areas: "railP header header header header railS" "railP main main main main railS"  "railP footer footer footer footer railS";
+}
+
+@media screen and (min-width: 768px) {
+  
+  body {
+    --gridRail: 10%;
+    --sectionFlow: row;
+  }
+
+}
+
+.g-header {
+  grid-area: header;
+}
+
+.g-footer {
+  grid-area: footer;
+}
+
+.g-main {
+  grid-area: main;  
+}
+
+
 .g-main {
     display: flex;
-    width: 80%;
-    max-width: 50em;
-    margin: 0 auto;
+
 }

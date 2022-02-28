@@ -107,6 +107,7 @@
 
 .portfolio {
     display: flex;
+    flex-direction: var(--sectionFlow);
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
@@ -114,9 +115,11 @@
     .s-header {
         width: 100%;
     }
+}
 
+@media screen and (min-width: 768px) {
     .portfolio__section {
-        width: 45%;
+        flex-basis: 45%;
     }
 }
 
