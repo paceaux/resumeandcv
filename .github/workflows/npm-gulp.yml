@@ -1,0 +1,41 @@
+name: NodeJS with Gulp
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build project
+      run: |
+        npm install
+        gulp build
+
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{secrets.SITE_SERVER}}
+        username: ${{secrets.SITE_USERNAME}}
+        password: ${{secrets.SITE_PASS}}
+        local-dir: ./public/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          
