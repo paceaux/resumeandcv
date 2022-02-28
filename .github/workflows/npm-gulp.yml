@@ -22,7 +22,20 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Build
+    - name: Build project
       run: |
         npm install
         gulp build
+
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{secrets.SITE_SERVER}}
+        username: ${{secrets.SITE_USERNAME}}
+        password: ${{secrets.SITE_PASS}}
+        local-dir: ./public/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          
