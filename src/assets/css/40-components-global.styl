@@ -41,57 +41,16 @@
 }
 
 .g-header__subtitles {
-    --subTitleHeight: calc(var(--biggestTitleSize) * 1.2);
-    --subtTitleCount: 5;
-    --subTitleAnimationDelay: 4s;
-    height: var(--subTitleHeight);
-    overflow: hidden;
+
 }
 
-vendors = official;
-
-@keyframes subtitleFadeInOut {
-    0% {
-        color: rgba(0,0,0,0.01);
-    }
-
-    50% {
-        color: rgba(colorBaseDarkest, colorBaseDarkest, colorBaseDarkest, 1);
-    }
-
-    100% {
-        color: rgba(0,0,0,0.01);
-    }
-}
-
-@keyframes subtitleSlideUp {
-
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(calc(0em - (var(--bigTitleSize)  * var(--subtTitleCount))));
-    }
-}
 .g-header__subtitleList {
     display: block;
-    animation-name: subtitleSlideUp;
-    animation-delay: var(--subTitleAnimationDelay);
-    animation-duration: calc(var(--subTitleAnimationDelay) * var(--subtTitleCount));
-    animation-iteration-count: 1;
-    animation-timing-function: steps(var(--subtTitleCount), jump-start);
-    animation-fill-mode: backwards;
-    animation-direction: alternate;
 }
 
 .g-header__subtitle {
     display: block;
-    height: var(--subTitleHeight);
     text-align: center;    
-    animation-name: subtitleFadeInOut;
-    animation-duration: var(--subTitleAnimationDelay)
-    animation-iteration-count: var(--subtTitleCount);
-    animation-timing-function: ease-out;
 }
 
 .g-header__titleLink {  
