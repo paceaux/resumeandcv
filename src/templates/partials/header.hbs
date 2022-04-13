@@ -1,7 +1,13 @@
 <header class="g-header">
     <div class="g-header__hgroup" role="banner">
         <h1 class="g-header__title"><a class="g-header__titleLink"href="/">{{content.global.site-title}}</a></h1>
-        <h2 class="g-header__subtitle">{{content.global.site-subtitle}}</h2>
+        <h2 class="g-header__subtitles">
+            <span class="g-header__subtitleList" data-count="{{@content.global.site.site-subtitles.length}}">
+                {{#each content.global.site-subtitles}}
+                    <span class="g-header__subtitle g-header__subtitle--{{@index}}">{{this}}</span>
+                {{/each}}
+            </span>
+        </h2>
     </div>
     {{> nav}}
 </header>
