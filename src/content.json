@@ -1,7 +1,14 @@
 {
 	"global": {
 		"site-title": "Frank M. Taylor",
-		"site-subtitle": "Front End Developer"
+		"site-subtitle": "Front End Developer",
+		"site-subtitles": [
+			"Front End Developer",
+			"CMS Consultant",
+			"Architect",
+			"JavaScript Engineer",
+			"Tridion Developer"
+		]
 	},
 	"links": {
 		"code": {
@@ -19,6 +26,7 @@
 	},
 	"navigations": {
 		"work": {
+			"RedHat": "/work-history/redhat.html",
 			"Exlrt": "/work-history/exlrt.html",
 			"Tahzoo": "/work-history/tahzoo.html",
 			"Childrens": "/work-history/childrens.html",

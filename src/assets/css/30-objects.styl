@@ -178,3 +178,58 @@ article .icon::before {
         padding-left: 1.618rem;
     }
 }
+
+
+/*===============
+    #animation
+===============*/
+vendors = official;
+
+@keyframes fadeInOut {
+    0% {
+        color: rgba(0,0,0,0.01);
+    }
+
+    50% {
+        color: rgba(colorBaseDarkest, colorBaseDarkest, colorBaseDarkest, 1);
+    }
+
+    100% {
+        color: rgba(0,0,0,0.01);
+    }
+}
+
+@keyframes setSlideUp {
+
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(calc(0em - (var(--bigTitleSize)  * var(--animatedSetCount))));
+    }
+}
+.animation--setSlidesUp {
+    --animatedSetItemHeight: calc(var(--biggestTitleSize) * 1.2);
+    --animatedSetCount: 5;
+    --animatedSetDelay: 4s;
+    height: var(--animatedSetItemHeight);
+    overflow: hidden;
+}
+
+.animation__set {
+    animation-name: setSlideUp;
+    animation-delay: var(--animatedSetDelay);
+    animation-duration: calc(var(--animatedSetDelay) * var(--animatedSetCount));
+    animation-iteration-count: 1;
+    animation-timing-function: steps(var(--animatedSetCount), jump-start);
+    animation-fill-mode: backwards;
+    animation-direction: alternate;
+}
+
+.animation__item {
+    height: var(--animatedSetItemHeight);
+    animation-name: fadeInOut;
+    animation-duration: var(--animatedSetDelay)
+    animation-iteration-count: var(--animatedSetCount);
+    animation-timing-function: ease-out;
+}
