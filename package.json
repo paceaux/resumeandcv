@@ -32,7 +32,6 @@
     "gulp-concat": "^2.6.1",
     "gulp-extname": "^0.2.2",
     "gulp-sitemap": "^4.2.0",
-    "gulp-stylus": "^2.6.0",
     "html-min": "0.0.4",
     "require-dir": "^1.2.0",
     "run-sequence": "^1.2.2"
