@@ -17,14 +17,12 @@
     --modifier
 */
 
-.workHistory {
-
-}
-
 .workHistory__header {
     border-bottom: .25em solid colorNeutralDarkest;
+}
 
-    @media (min-width: 768px) {
+@media screen and (min-width: 768px) {
+    .workHistory__header {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -62,8 +60,10 @@
  .position__header {
     font-size: .618em;
     border-bottom: .25em solid colorNeutralDarkest;
+ }
 
-    @media (min-width: 768px) {
+ @media screen and (min-width: 768px) {
+    .position__header {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -111,10 +111,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-
-    .s-header {
-        width: 100%;
-    }
 }
 
 @media screen and (min-width: 768px) {
@@ -127,7 +123,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio__section {
+        flex-basis: 45%;
+    }
 }
 
 .portfolio__sectionHeader {
@@ -137,10 +138,10 @@
 .portfolio__sectionLink {
     color: inherit;
     border-bottom: none;
+}
 
-    &:hover, &:focus {
-        border-bottom: none;
-    }
+.portfolio__sectionLink:is(:hover, :focus) {
+    border-bottom: none;
 }
 
 .portfolio__sectionTitle {
@@ -161,24 +162,24 @@
     left: 0;
     width: 12em;
     bottom: 4.5rem;
+}
 
-    .list--links {
-        color: transparent;
-        flex-direction: column;
-        padding: 0;
-    }
+.portfolio__codeLinks  .list--links {
+    color: transparent;
+    flex-direction: column;
+    padding: 0;
+}
 
-    .list__item {
-        margin: .25em 0;
-    }
+.portfolio__codeLinks  .list__item {
+    margin: .25em 0;
+}
 
-    .list__itemLink {
-        padding: .5em .618rem .5em 0;
+.portfolio__codeLinks  .list__itemLink {
+    padding: .5em .618rem .5em 0;
+}
 
-        &:hover, &:focus {
-            background-color: colorNeutralLighter;
-        }
-    }
+.portfolio__codeLinks  .list__itemLink:is(:hover, :focus) {
+        background-color: colorNeutralLighter;
 }
 
 /*=== portfolioItem ===
@@ -214,10 +215,10 @@
 .portfolioItem__repoLink {
     margin: .618rem;
     iconify('github.svg');
+}
 
-    &:hover {
+.portfolioItem__repoLink:is(:hover, :focus) {
         border-bottom: none;
-    }
 }
 
 .portfolioItem__description li {

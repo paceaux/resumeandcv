@@ -86,16 +86,16 @@
     padding-right: 0;
     margin-left: 0;
 
-    .list__itemLink {
-        color: inherit;
-
-        &:hover, &:focus {
-            color: colorNeutralDarker;
-            border-bottom: 1px solid transparent;
-        }
-    }
 }
 
+.list--links .list__itemLink {
+    color: inherit;
+}
+
+.list--links .list__itemLink:is(:hover, :focus) {
+    color: colorNeutralDarker;
+    border-bottom: 1px solid transparent;
+}
 
 
 /*===============
@@ -144,17 +144,15 @@
     #icon
 ===============*/
 
-.icon {
-    &::before {
-        content: ' ';
-        display: inline-block;
-        vertical-align: -.75em;
-        line-height: 1;
-        width: 2em;
-        height: 2em;
-        margin-right: .618em;
-        background-repeat: no-repeat;
-    }
+.icon::before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: -.75em;
+    line-height: 1;
+    width: 2em;
+    height: 2em;
+    margin-right: .618em;
+    background-repeat: no-repeat;
 }
 
 article .icon::before {
@@ -168,17 +166,14 @@ article .icon::before {
 .article {
 }
 
-.article--collapsible {
 
-    .article__title {
-        display: inline-block;
-    }
-
-    .article__content {
-        padding-left: 1.618rem;
-    }
+.article--collapsible .article__title {
+    display: inline-block;
 }
 
+.article--collapsible .article__content {
+    padding-left: 1.618rem;
+}
 
 /*===============
     #animation
