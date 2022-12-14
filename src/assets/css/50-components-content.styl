@@ -51,6 +51,8 @@
 */
 
  .position {
+    --textSize: inherit;
+     font-size: var(--textSize);
      padding: .5rem 0 0 .618rem;
      border-radius: 5px;
      margin: .5rem 0 0 1rem;
@@ -81,11 +83,21 @@
     margin-left: 0;
  }
 
- .position
-    for num in (2..8)
-        &:nth-of-type({num}) {
-            font-size: 1em - ((num - 1)/10);
-        }
+.position:nth-of-type(2) {
+  --textSize: 0.9em;
+}
+.position:nth-of-type(3) {
+  --textSize: 0.8em;
+}
+.position:nth-of-type(4) {
+  --textSize: 0.7em;
+}
+.position:nth-of-type(5) {
+  --textSize: 0.6em;
+}
+.position:nth-of-type(6) {
+  --textSize: 0.5em;
+}
 
 
 /*===============
@@ -234,7 +246,42 @@
     box-shadow: 0px 0px 1px 1px rgba(colorBaseDarkest,colorBaseDarkest,colorBaseDarkest,.4);
 }
 
-for logo in codepen github gulp jsfiddle linkedin quora sass stack twitter blog
-    .icon[href*={logo}] {
-        iconify(logo)
-    }
+.icon[href*=codepen]::before {
+  background-image: url("/assets/img/codepen.svg");
+}
+
+.icon[href*=github]::before {
+  background-image: url("/assets/img/github.svg");
+}
+
+.icon[href*=gulp]::before {
+  background-image: url("/assets/img/gulp.svg");
+}
+
+.icon[href*=jsfiddle]::before {
+  background-image: url("/assets/img/jsfiddle.svg");
+}
+
+.icon[href*=linkedin]::before {
+  background-image: url("/assets/img/linkedin.svg");
+}
+
+.icon[href*=quora]::before {
+  background-image: url("/assets/img/quora.svg");
+}
+
+.icon[href*=sass]::before {
+  background-image: url("/assets/img/sass.svg");
+}
+
+.icon[href*=stack]::before {
+  background-image: url("/assets/img/stack.svg");
+}
+
+.icon[href*=twitter]::before {
+  background-image: url("/assets/img/twitter.svg");
+}
+
+.icon[href*=blog]::before {
+  background-image: url("/assets/img/blog.svg");
+}
