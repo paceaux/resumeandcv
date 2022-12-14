@@ -178,7 +178,6 @@ article .icon::before {
 /*===============
     #animation
 ===============*/
-vendors = official;
 
 @keyframes fadeInOut {
     0% {
