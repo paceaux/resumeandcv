@@ -20,8 +20,6 @@ module.exports = {
         destName: 'main.css',
         opts: {
             'include css': true,
-            paths: ['src/assets/imports'],
-            import: ['index.styl'],
         },
         src: [
             `${cssPath}/**/*.styl`,
