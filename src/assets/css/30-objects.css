@@ -1,12 +1,12 @@
 @layer objects {
-/*====================
+  /* ====================
     OBJECTS
-====================*/
+==================== */
 
- /*==========
+  /* ==========
      #TABLE
- ==========*/
-/*=== table ===
+ ========== */
+  /* === table ===
     __head
     __body
     __row
@@ -15,220 +15,219 @@
         --heading
         --company
     __caption
-    
+
     --history
     --education
 */
 
-.table {
-    width: 100%
-}
+  .table {
+    width: 100%;
+  }
 
-.table__row--header th{
-    border-bottom: 2px solid var(--colorNeutralDarkest)
-}
+  .table__row--header th {
+    border-bottom: 2px solid var(--colorNeutralDarkest);
+  }
 
- /*==========
+  /* ==========
      #LISTS
- ==========*/
+ ========== */
 
-/*=== lists ===
+  /* === lists ===
     __listContainer
-    
+
     --col
     --row
 */
 
-.lists {
+  .lists {
     display: flex;
-}
+  }
 
-.lists--col {
+  .lists--col {
     flex-direction: column;
-}
+  }
 
-.lists--row {
-    justify-content: space-between;
+  .lists--row {
     flex-wrap: wrap;
-}
+    justify-content: space-between;
+  }
 
-.lists__listContainer {
-    font-size: .8em;
+  .lists__listContainer {
+    flex-basis: 24%;
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 24%
-    background: rgba(55,110,220,.1);
-    margin: .618em;
-}
+    margin: 0.618em;
+    font-size: 0.8em;
+    background: rgba(55, 110, 220, 0.1);
+  }
 
-/*=== .list ===
+  /* === .list ===
     __item
     __itemLink
     __title
-    
+
     --typeCircle
     --typeNone
     --links
 */
-.list--typeCircle {
+  .list--typeCircle {
     list-style-type: circle;
-}
+  }
 
-.list--typeNone {
+  .list--typeNone {
     list-style-type: none;
-}
+  }
 
-.list--links {
+  .list--links {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
+    width: 100%;
     margin-left: 0;
+  }
 
-}
-
-.list--links .list__itemLink {
+  .list--links .list__itemLink {
     color: inherit;
-}
+  }
 
-.list--links .list__itemLink:is(:hover, :focus) {
-    color: var(--colorNeutralDarker);
+  .list--links .list__itemLink:is(:hover, :focus) {
     border-bottom: 1px solid transparent;
-}
+    color: var(--colorNeutralDarker);
+  }
 
 
-/*===============
+  /* ===============
     #NAV
-===============*/
-/*=== nav ===
+=============== */
+  /* === nav ===
     __list
     __listItem
     __itemLink
     __element
-    
+
     --sub
 */
 
-.nav {
+  .nav {
 
-}
+  }
 
-.nav__list{
+  .nav__list {
+    list-style-type: none;
     display: flex;
     justify-content: flex-end;
-    list-style-type: none;
-}
+  }
 
-.nav--sub .nav__list {
-    font-size: .8em;
+  .nav--sub .nav__list {
     flex-direction: row;
     flex-wrap: wrap;
     padding-right: 0;
-    margin-top: .618rem;
+    margin-top: 0.618rem;
     border-top: 1px solid;
-}
+    font-size: 0.8em;
+  }
 
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     .nav--sub {
-        display: flex;
-        justify-content: flex-end;
+      display: flex;
+      justify-content: flex-end;
     }
 
     .nav--sub .nav__list {
-        max-width: 50%;
-    }    
-}
+      max-width: 50%;
+    }
+  }
 
-/*===============
+  /* ===============
     #icon
-===============*/
+=============== */
 
-.icon::before {
+  .icon::before {
     content: ' ';
     display: inline-block;
-    vertical-align: -.75em;
-    line-height: 1;
     width: 2em;
     height: 2em;
-    margin-right: .618em;
+    margin-right: 0.618em;
+    line-height: 1;
+    vertical-align: -0.75em;
     background-repeat: no-repeat;
-}
+  }
 
-article .icon::before {
-    display: none
-}
+  article .icon::before {
+    display: none;
+  }
 
-/*===============
+  /* ===============
     #article
-===============*/
+=============== */
 
-.article {
-}
+  .article {
+  }
 
 
-.article--collapsible .article__title {
+  .article--collapsible .article__title {
     display: inline-block;
-}
+  }
 
-.article--collapsible .article__content {
+  .article--collapsible .article__content {
     padding-left: 1.618rem;
+  }
 }
-
-}
-/*===============
+/* ===============
     #animation
-===============*/
+=============== */
 
 @keyframes fadeInOut {
-    0% {
-        color: rgba(0,0,0,0.01);
-    }
+  0% {
+    color: rgba(0, 0, 0, 0.01);
+  }
 
-    50% {
-        color: rgba(55, 55, 55, 1);
-    }
+  50% {
+    color: rgba(55, 55, 55, 1);
+  }
 
-    100% {
-        color: rgba(0,0,0,0.01);
-    }
+  100% {
+    color: rgba(0, 0, 0, 0.01);
+  }
 }
 
 @keyframes setSlideUp {
 
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(calc(0em - (var(--bigTitleSize)  * var(--animatedSetCount))));
-    }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(0em - (var(--bigTitleSize)  * var(--animatedSetCount))));
+  }
 }
 
 @layer objects {
-.animation--setSlidesUp {
+  .animation--setSlidesUp {
     --animatedSetItemHeight: calc(var(--biggestTitleSize) * 1.2);
     --animatedSetCount: 5;
     --animatedSetDelay: 4s;
-    height: var(--animatedSetItemHeight);
+
     overflow: hidden;
-}
+    height: var(--animatedSetItemHeight);
+  }
 
-.animation__set {
+  .animation__set {
     animation-name: setSlideUp;
-    animation-delay: var(--animatedSetDelay);
     animation-duration: calc(var(--animatedSetDelay) * var(--animatedSetCount));
-    animation-iteration-count: 1;
     animation-timing-function: steps(var(--animatedSetCount), jump-start);
-    animation-fill-mode: backwards;
+    animation-delay: var(--animatedSetDelay);
+    animation-iteration-count: 1;
     animation-direction: alternate;
-}
+    animation-fill-mode: backwards;
+  }
 
-.animation__item {
+  .animation__item {
     height: var(--animatedSetItemHeight);
     animation-name: fadeInOut;
-    animation-duration: var(--animatedSetDelay)
-    animation-iteration-count: var(--animatedSetCount);
+    animation-duration: var(--animatedSetDelay);
     animation-timing-function: ease-out;
-}
+    animation-iteration-count: var(--animatedSetCount);
+  }
 }

@@ -1,22 +1,22 @@
 /*
     Comment-A: rem for left-right, for consistent alignment.
-        em for top/bottom, so the spacing is relative to font-size  
+        em for top/bottom, so the spacing is relative to font-size
 */
 @layer elements {
-:root {
+  :root {
     /* Color Palette
         Variables follow convention found here: https://codepen.io/paceaux/pen/XdxQza
         Color is a dark, dark gray rgb (55, 55, 55). All grays and base line styles are multiples of this
         Using a "base value", all colors are a multiple of 55
     */
     --colorNeutralDarkest: rgb(55, 55, 55);
-    --colorNeutralDarker: rgb(55,55,55);                    /*base:           #373737;    hsl(22%, 22%, 22%) */
-    --colorNeutralDark: rgb(110,110,110);                   /*  base * 2:  #6e6e6e;      hsl(0, 0%, 43%) */
-    --colorNeutral: rgb(165,165,165);                       /* base * 3:   #a5a5a5;      hsl(0, 0%, 65%) */
-    --colorNeutralLight: rgb(192.5,192.5,192.5);            /*base * 3.5: #c1c1c1;      hsl(0, 0%, 75%) */
-    --colorNeutralLighter: rgb(220,220,220);                /*  base * 4:    #dcdcdc;       hsl(0, 0%, 86%) */
-    --colorCool: hsl(210, 61%, 46%);                      /*   #6ea5dc; hsl(210, 61%, 46%);  */
-    --colorCoolDarker: hsl(210, 61%, 36%);                   /* #6ea5c1;  hsl (200,40%,59%) */
+    --colorNeutralDarker: rgb(55, 55, 55);                    /* base:           #373737;    hsl(22%, 22%, 22%) */
+    --colorNeutralDark: rgb(110, 110, 110);                   /*  base * 2:  #6e6e6e;      hsl(0, 0%, 43%) */
+    --colorNeutral: rgb(165, 165, 165);                       /* base * 3:   #a5a5a5;      hsl(0, 0%, 65%) */
+    --colorNeutralLight: rgb(192.5, 192.5, 192.5);            /* base * 3.5: #c1c1c1;      hsl(0, 0%, 75%) */
+    --colorNeutralLighter: rgb(220, 220, 220);                /*  base * 4:    #dcdcdc;       hsl(0, 0%, 86%) */
+    --colorCool: hsl(210deg, 61%, 46%);                      /*   #6ea5dc; hsl(210, 61%, 46%);  */
+    --colorCoolDarker: hsl(210deg, 61%, 36%);                   /* #6ea5c1;  hsl (200,40%,59%) */
 
     /*  Colors
         Variables follow convention found here: https://gist.github.com/paceaux/8638765e747f5bd6387b721cde99e066#sassscssstylus-naming
@@ -27,20 +27,20 @@
     --baseLinkColorHover: var(--colorCoolDarker);
     --baseInlineBorderColor: var(--colorNeutralLight);
 
-    /*Line Heights*/
+    /* Line Heights */
     --baseLineHeight: 1.618;
     --smallLineHeight: 1.2;
 
-    /*text (body copy)*/
-    --biggestTextSize:  1.3em;
+    /* text (body copy) */
+    --biggestTextSize: 1.3em;
     --biggerTextSize: 1.2em;
     --bigTextSize: 1.1em;
     --baseTextSize: 1em;
-    --smallTextSize: .8em;
-    --smallerTextSize: .75em;
-    --smallestTextSize: .618em;
+    --smallTextSize: 0.8em;
+    --smallerTextSize: 0.75em;
+    --smallestTextSize: 0.618em;
 
-    /*text (titles)
+    /* text (titles)
             The small title sizes use the big text sizes; so they overlap
             They're here, though, so that, if desired, we can deviate and not have them overlap
     */
@@ -50,240 +50,239 @@
     --smallTitleSize: var(--biggestTextSize);
     --smallerTitleSize: var(--biggerTextSize);
     --smallestTitleSize: var(--bigTextSize);
-
     --fontFamilyTitle: Helvetica, Arial, sans-serif;
-    --fontFamilyBase: Georgia, "Times New Roman", serif;
-}
+    --fontFamilyBase: Georgia, 'Times New Roman', serif;
+  }
 
-html {
-    color: #373737; 
-    color: var(--baseTextColor);
-    font-size: calc(.5vw + 1rem); /*the font-size can scale up as the browser window gets larger, but doesn't get hard to read when the browser window shrinks*/
-    font-family: var(--fontFamilyBase);
+  html {
+    font-size: calc(0.5vw + 1rem); /* the font-size can scale up as the browser window gets larger, but doesn't get hard to read when the browser window shrinks */
     line-height: 1.168;
     line-height: var(--baseLineHeight);
-}
+    font-family: var(--fontFamilyBase);
+    color: #373737;
+    color: var(--baseTextColor);
+  }
 
 
-/*=====
+  /* =====
   #Everything
-=====*/
+===== */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-dl,
-pre {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl,
+  pre {
+    margin: 0 0.618rem 0 0.618rem; /* Comment-A */
     line-height: 1.618;
     line-height: var(--baseLineHeight);
-    margin: 0 .618rem 0 .618rem; /* Comment-A */
-}
+  }
 
 
-/*=====
+  /* =====
   #Headings
-=====*/
+===== */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--fontFamilyTitle);
-    font-weight: bold;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: calc(1.618vmin - 1vmax + 0.35em); /* increases margin as screen width gets smaller */
     line-height: 1.2;
     line-height: var(--smallLineHeight);
-    margin-bottom: calc(1.618vmin - 1vmax + .35em); /* increases margin as screen width gets smaller */
-}
+    font-family: var(--fontFamilyTitle);
+    font-weight: bold;
+  }
 
-h1 {
+  h1 {
     font-size: 2.617924em;
     font-size: var(--biggestTitleSize);
-}
+  }
 
-h2 {
+  h2 {
     font-size: 1.618em;
     font-size: var(--bigTitleSize);
-}
+  }
 
-h3 {
+  h3 {
     font-size: 1.5em;
     font-size: var(--baseTitleSize);
-}
+  }
 
-h4 {
+  h4 {
     font-size: 1.3em;
     font-size: var(--smallTitleSize);
-}
+  }
 
-h5 {
+  h5 {
     font-size: 1.2em;
     font-size: var(--smallerTitleSize);
-}
+  }
 
-h6 {
+  h6 {
     font-size: 1.1em;
     font-size: var(--smallestTitleSize);
-}
+  }
 
 
-/*=====
+  /* =====
   #Lists
-=====*/
+===== */
 
-ul,
-ol,
-dl {
-    padding: .618em .618rem; /* Comment-A */
-}
+  ul,
+  ol,
+  dl {
+    padding: 0.618em 0.618rem; /* Comment-A */
+  }
 
-li {
+  li {
+    padding: 0;
+    margin: 0 0 0 0.618rem;
     line-height: 1.618;
     line-height: var(--baseLineHeight);
-    padding: 0;
-    margin: 0 0 0 .618rem;
-}
+  }
 
-li {
+  li {
     list-style-position: outside;
-}
+  }
 
-dt {
-    text-indent: -.618rem;
-}
+  dt {
+    text-indent: -0.618rem;
+  }
 
-dd {
+  dd {
+    padding: 0 0.618rem 0 0.618rem;
     margin: 0;
-    padding: 0 .618rem 0 .618rem;
-}
+  }
 
 
-/*=====
+  /* =====
   #Paragraphs #Blocks
-=====*/
+===== */
 
-hr {
+  hr {
+    margin: 1.618em 0.618rem;
+    border-width: 0.0625em;
+    border-style: solid;
     color: #a5a5a5;
     color: var(--colorNeutral);
-    border-width: .0625em;
-    border-style: solid;
-    margin: 1.618em .618rem;
-}
+  }
 
-p,
-blockquote {
+  p,
+  blockquote {
     line-height: 1.618;
     line-height: var(--baseLineHeight);
-}
+  }
 
-p {
+  p {
+    margin-bottom: 0.618em;
     font-size: 1em;
     font-size: var(--baseTextSize);
-    margin-bottom: .618em;
-}
+  }
 
 
-/* Credit where it's due:
+  /* Credit where it's due:
 https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
 */
-blockquote {
-    background: rgba(165, 165, 165, .15);
+  blockquote {
+    quotes: '\201C''\201D''\2018''\2019';
+    padding: 0.618em 0.618rem;
+    margin: 1.618em 0.618rem; /* Comment-A */
     border-left: 10px solid#dcdcdc;
     border-left: 10px solid var(--colorNeutralLighter);
-    margin: 1.618em .618rem; /* Comment-A */
-    padding: 0.618em .618rem;
-    quotes: "\201C""\201D""\2018""\2019";
-}
+    background: rgba(165, 165, 165, 0.15);
+  }
 
-blockquote::before {
-    color: #c1c1c1;
-    color: var(--colorNeutralLight);
+  blockquote::before {
     content: open-quote;
+    margin-right: 0.25em;
     font-size: 4em;
     line-height: 0.1em;
-    margin-right: 0.25em;
+    color: #c1c1c1;
+    color: var(--colorNeutralLight);
     vertical-align: -0.4em;
-}
+  }
 
 
-/*=====
+  /* =====
   #Content-Flow
-=====*/
+===== */
 
-em,
-i,
-cite {
+  em,
+  i,
+  cite {
     font-style: italic;
-}
+  }
 
-strong,
-b {
+  strong,
+  b {
     font-weight: 700;
-}
+  }
 
-cite {
+  cite {
     display: block;
     text-align: right;
-}
+  }
 
-u {
-    text-decoration: none;
+  u {
     border-bottom: 1px dotted red;
-}
+    text-decoration: none;
+  }
 
-small,
-sub,
-sup {
-    font-size: .618em;
+  small,
+  sub,
+  sup {
+    font-size: 0.618em;
     font-size: var(--smallestTextSize);
     line-height: 1;
-}
+  }
 
-sub {
+  sub {
     vertical-align: sub;
-}
+  }
 
-sup {
+  sup {
     vertical-align: super;
-}
+  }
 
 
-/*=====
+  /* =====
   #content-flow #editorial
-=====*/
+===== */
 
-s,
-strike,
-del,
-ins {
+  s,
+  strike,
+  del,
+  ins {
     color: #6e6e6e;
     color: var(--baseEditorialTextColor);
-}
+  }
 
-s,
-strike,
-del {
+  s,
+  strike,
+  del {
     text-decoration: strikethrough;
-}
+  }
 
-ins,
-del {
-    background-color: rgba(220, 220, 220, .25);
-}
+  ins,
+  del {
+    background-color: rgba(220, 220, 220, 0.25);
+  }
 
-ins {
+  ins {
     text-decoration: none;
-}
+  }
 
 
-/*
+  /*
 mark and selection should be different, so user knows which one they've selected.
 
 mark and selections:
@@ -292,179 +291,180 @@ mark and selections:
 Hue is different
 */
 
-mark {
-    background-color: rgba(165, 220, 165, .9);
-}
+  mark {
+    background-color: rgba(165, 220, 165, 0.9);
+  }
 
-::selection {
-    background-color: rgba(165, 220, 220, .9);
-}
+  ::selection {
+    background-color: rgba(165, 220, 220, 0.9);
+  }
 
-/*because mark and selection have same saturation, brightenss, mark won't easily stand out if it's selected*/
-mark::selection {
-    background-color: rgba(165, 220, 110, .9);
-}
+  /* because mark and selection have same saturation, brightenss, mark won't easily stand out if it's selected */
+  mark::selection {
+    background-color: rgba(165, 220, 110, 0.9);
+  }
 
-/*dfn and dt both do the same thing: denote a term to be defined */
-dfn,
-dt {
-    font-style: oblique;
+  /* dfn and dt both do the same thing: denote a term to be defined */
+  dfn,
+  dt {
     font-weight: 700;
+    font-style: oblique;
     text-transform: capitalize;
-}
+  }
 
 
-/*=====
+  /* =====
 #Content-flow #Code
-=====*/
+===== */
 
-pre,
-code,
-var,
-samp,
-data {
+  pre,
+  code,
+  var,
+  samp,
+  data {
     font-family: monospace;
-}
+  }
 
-kbd,
-samp,
-data {
-    background-color: rgba(165, 165, 165, .2);
-}
+  kbd,
+  samp,
+  data {
+    background-color: rgba(165, 165, 165, 0.2);
+  }
 
-kbd {
-    font-size: .75em;
-    font-size: var(--smallerTextSize);
-    padding: .25ex .5ex;
+  kbd {
+    padding: 0.25ex 0.5ex;
     border: 1px solid #c1c1c1;
     border: 1px solid  var(--baseInlineBorderColor);
     border-radius: 3px;
-}
+    font-size: 0.75em;
+    font-size: var(--smallerTextSize);
+  }
 
-/*Treat samp like a mini blockquote. because basically you're quoting what the computer would do*/
-samp,
-data {
+  /* Treat samp like a mini blockquote. because basically you're quoting what the computer would do */
+  samp,
+  data {
     padding: 0 10px;
-}
+  }
 
-var,
-data {
+  var,
+  data {
     font-style: italic;
-}
+  }
 
-samp {
+  samp {
     border-left: 5px solid #c1c1c1;
     border-left: 5px solid var(--baseInlineBorderColor);
-}
+  }
 
-data {
+  data {
     padding: 0 10px;
-}
+  }
 
-pre {
-    font-size: .75em;
-    font-size: var(--smallerTextSize);
-    line-height: 1.2;
-    line-height: var(--smallLineHeight);
-    padding: .618em .618rem;
+  pre {
+    overflow: scroll;
+    padding: 0.618em 0.618rem;
     border: 1px solid #c1c1c1;
     border: 1px solid var(--baseInlineBorderColor);
     border-radius: 2px;
-    overflow: scroll;
-}
+    font-size: 0.75em;
+    font-size: var(--smallerTextSize);
+    line-height: 1.2;
+    line-height: var(--smallLineHeight);
+  }
 
 
-/*=====
+  /* =====
   #Ruby
-=====*/
+===== */
 
-ruby {
-    display: ruby;
+  ruby {
     position: relative;
-    margin:0 .5ex;
+    display: ruby;
+    margin: 0 0.5ex;
     -webkit-ruby-position: before;
     ruby-position: over;
     ruby-position: before;
-}
+  }
 
-rtc, rbc {
+  rtc,
+  rbc {
     font-size: inherit;
     line-height: 1;
     ruby-align: start;
-}
+  }
 
-rt {
+  rt {
     display: ruby-text;
-    font-size: .7em;
-}
+    font-size: 0.7em;
+  }
 
-rt + rt {
-    margin-left: .5ex;
-}
+  rt + rt {
+    margin-left: 0.5ex;
+  }
 
-rtc > bdo {
+  rtc > bdo {
     display: -webkit-ruby-text-container;
     display: ruby-base-container;
-}
+  }
 
-/*complex ruby for chrome and Edge*/
-/*only FF has "complete" ruby support*/
-@supports (ruby-align: left) or ( not (display:ruby-base-container))  {
+  /* complex ruby for chrome and Edge */
+  /* only FF has "complete" ruby support */
+  @supports (ruby-align: left) or ( not (display:ruby-base-container)) {
 
     ruby {
-        display:inline-flex;
-        flex-direction: column;
-        vertical-align: 1em;
-        line-height: 1;
+      display: inline-flex;
+      flex-direction: column;
+      line-height: 1;
+      vertical-align: 1em;
     }
 
-    rtc, rt {
-        order: -1;
-        flex-grow: 1;
-        flex-shrink: 0;
+    rtc,
+    rt {
+      order: -1;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
 
     rtc {
-        display: inline-flex;
+      display: inline-flex;
     }
-}
+  }
 
-/*Edge fixes*/
-@supports  ((ruby-align: left)) {
+  /* Edge fixes */
+  @supports ((ruby-align: left)) {
 
     rtc {
-        justify-content: space-between;
+      justify-content: space-between;
     }
 
     rt {
-        display: inline-flex;
+      display: inline-flex;
     }
-}
+  }
 
 
-/*=====
+  /* =====
 #Links
-=====*/
+===== */
 
-a {
+  a {
+    border-bottom: 1px dotted transparent;
     color: #6ea5dc;
     color: var(--baseLinkColor);
     text-decoration: none;
-    border-bottom: 1px dotted transparent;
-    transition: all .3s ease-in-out;
-}
+    transition: all 0.3s ease-in-out;
+  }
 
-a:hover,
-a:focus {
-    color: #6ea5c1;
-    color: var(--baseLinkColorHover);
+  a:hover,
+  a:focus {
     border-color: #6ea5c1;
     border-color: var(--baseLinkColorHover);
     outline: none;
-}
+    color: #6ea5c1;
+    color: var(--baseLinkColorHover);
+  }
 
-a:active {
+  a:active {
     border-style: solid;
-}
-
+  }
 }

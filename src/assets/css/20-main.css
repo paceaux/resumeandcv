@@ -1,7 +1,6 @@
-
 @keyframes fadein {
   0% {
-    color: rgba(0,0,0,0.01);
+    color: rgba(0, 0, 0, 0.01);
   }
 
   100% {
@@ -10,48 +9,46 @@
 }
 
 @layer layout {
-:root {
-  --gridRail: 2%;
-  --globalColumns: 3;
-  --sectionFlow: column;
-}
-
-/*====================
-    LAYOUT
-====================*/
-
-body {
-  display: grid;
-  grid-template-columns: var(--gridRail) repeat(4, 1fr) var(--gridRail);
-  grid-template-rows: auto 1fr 10%;
-  grid-template-areas: "railP header header header header railS" "railP main main main main railS"  "railP footer footer footer footer railS";
-  min-height: 100vh;
-}
-
-@media screen and (min-width: 768px) {
-  
-  body {
-    --gridRail: 10%;
-    --sectionFlow: row;
+  :root {
+    --gridRail: 2%;
+    --globalColumns: 3;
+    --sectionFlow: column;
   }
 
-}
+  /* ====================
+    LAYOUT
+==================== */
 
-.g-header {
-  grid-area: header;
-}
+  body {
+    display: grid;
+    grid-template-areas: 'railP header header header header railS' 'railP main main main main railS'  'railP footer footer footer footer railS';
+    grid-template-rows: auto 1fr 10%;
+    grid-template-columns: var(--gridRail) repeat(4, 1fr) var(--gridRail);
+    min-height: 100vh;
+  }
 
-.g-footer {
-  grid-area: footer;
-}
+  @media screen and (min-width: 768px) {
 
-.g-main {
-  grid-area: main;  
-}
+    body {
+      --gridRail: 10%;
+      --sectionFlow: row;
+    }
+  }
+
+  .g-header {
+    grid-area: header;
+  }
+
+  .g-footer {
+    grid-area: footer;
+  }
+
+  .g-main {
+    grid-area: main;
+  }
 
 
-.g-main {
+  .g-main {
     display: flex;
-
-}
+  }
 }

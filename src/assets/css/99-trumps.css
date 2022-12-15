@@ -1,40 +1,40 @@
 @layer trumps {
-/*====================
+  /* ====================
     TRUMPS
-====================*/
+==================== */
 
-.collapsed {
+  .collapsed {
+    overflow: hidden;
     padding: 0;
     height: 0;
-    overflow: hidden;
-    transition: all .3s ease-in;
-}
+    transition: all 0.3s ease-in;
+  }
 
-.is-active{
+  .is-active {
     border-bottom: 1px solid !important;
-}
+  }
 }
 
 @keyframes unlock {
-    0% {
-        background-color: rgba(193, 110,110, .1)
-    }
+  0% {
+    background-color: rgba(193, 110, 110, 0.1);
+  }
 
-    50% {
-        background-color: rgba(193, 55, 55, .7)
-    }
+  50% {
+    background-color: rgba(193, 55, 55, 0.7);
+  }
 
-    100% {
-        background-color: rgba(193, 110,110, .1)
-    }
+  100% {
+    background-color: rgba(193, 110, 110, 0.1);
+  }
 }
 
 @layer trumps {
-.is-unlocked {
+  .is-unlocked {
     animation-name: unlock;
     animation-duration: 1s;
-    animation-iteration-count: 2;
     animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
     animation-direction: linear;
-}
+  }
 }
