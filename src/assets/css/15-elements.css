@@ -44,7 +44,7 @@
             The small title sizes use the big text sizes; so they overlap
             They're here, though, so that, if desired, we can deviate and not have them overlap
     */
-    --biggestTitleSize: 2.617924em; /* (16 x 1.618) x 1.618 */
+    --biggestTitleSize: 2.6179em; /* (16 x 1.618) x 1.618 */
     --bigTitleSize: 1.618em;
     --baseTitleSize: 1.5em;
     --smallTitleSize: var(--biggestTextSize);
@@ -103,7 +103,7 @@
   }
 
   h1 {
-    font-size: 2.617924em;
+    font-size: 2.6179em;
     font-size: var(--biggestTitleSize);
   }
 
@@ -386,8 +386,7 @@ Hue is different
     ruby-position: before;
   }
 
-  rtc,
-  rbc {
+  rtc {
     font-size: inherit;
     line-height: 1;
     ruby-align: start;

@@ -110,10 +110,6 @@
     --sub
 */
 
-  .nav {
-
-  }
-
   .nav__list {
     list-style-type: none;
     display: flex;
@@ -162,10 +158,6 @@
   /* ===============
     #article
 =============== */
-
-  .article {
-  }
-
 
   .article--collapsible .article__title {
     display: inline-block;

@@ -12,8 +12,7 @@
 
 @layer generic {
   html {
-    line-height: 1.15; /* 2 */
-    text-size-adjust: 100%; /* 3 */
+    line-height: 1.15; /* 2 */ /* 3 */
     text-size-adjust: 100%; /* 3 */
   }
 
@@ -146,7 +145,7 @@
   kbd,
   samp {
     font-size: 1em; /* 2 */
-    font-family: monospace, monospace; /* 1 */
+    font-family: monospace; /* 1 */
   }
 
   /**
@@ -278,7 +277,7 @@
  */
 
   button,
-  html [type='button'], 
+  html [type='button'],
   [type='reset'],
   [type='submit'] {
     appearance: button; /* 2 */
@@ -408,7 +407,7 @@
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
 
-  details, 
+  details,
   menu {
     display: block;
   }
