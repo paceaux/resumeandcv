@@ -7,6 +7,8 @@
     "url": "https://github.com/paceaux/resumeandcv.git"
   },
   "scripts": {
+    "lint:styles": "stylelint src/assets/css/**/*.css",
+    "lint:styles:fix": "stylelint src/assets/css/**/*.css --fix",
     "lint:js": "eslint src/**/*.js -f table && eslint src/**/*.js -f table -o reports/js.lint.txt",
     "lint:js:fix": "eslint src/**/*.js --fix",
     "lint": "eslint src/assets/js/** gulpfile.js/**/*.js",
@@ -34,6 +36,9 @@
     "gulp-sitemap": "^4.2.0",
     "html-min": "0.0.4",
     "require-dir": "^1.2.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "stylelint": "^14.16.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^5.0.0"
   }
 }
