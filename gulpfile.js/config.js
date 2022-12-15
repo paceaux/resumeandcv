@@ -22,7 +22,7 @@ module.exports = {
             'include css': true,
         },
         src: [
-            `${cssPath}/**/*.styl`,
+            `${cssPath}/**/*.css`,
         ],
 
     },
