@@ -120,22 +120,21 @@
 
 .portfolio {
     display: flex;
-    flex-direction: var(--sectionFlow);
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-@media screen and (min-width: 768px) {
-    .portfolio__section {
-        flex-basis: 45%;
-    }
+.portfolio .s-header {
+    width: 100%;
 }
 
 .portfolio__section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-basis: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -150,6 +149,7 @@
 
 .portfolio__sectionLink {
     color: inherit;
+    width: 100%;
     border-bottom: none;
 }
 
