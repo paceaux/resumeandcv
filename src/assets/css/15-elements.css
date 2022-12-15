@@ -2,6 +2,7 @@
     Comment-A: rem for left-right, for consistent alignment.
         em for top/bottom, so the spacing is relative to font-size  
 */
+@layer elements {
 :root {
     /* Color Palette
         Variables follow convention found here: https://codepen.io/paceaux/pen/XdxQza
@@ -466,3 +467,4 @@ a:active {
     border-style: solid;
 }
 
+}

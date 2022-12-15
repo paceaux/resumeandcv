@@ -10,6 +10,7 @@
  *    IE on Windows Phone and in iOS.
  */
 
+@layer generic {
 html {
   line-height: 1.15; /* 2 */
   -ms-text-size-adjust: 100%; /* 3 */
@@ -453,4 +454,6 @@ template {
 
 :empty:not(iframe) {
   display: none;
+}
+
 }

@@ -1,3 +1,4 @@
+@layer objects {
 /*====================
     OBJECTS
 ====================*/
@@ -175,6 +176,7 @@ article .icon::before {
     padding-left: 1.618rem;
 }
 
+}
 /*===============
     #animation
 ===============*/
@@ -202,6 +204,8 @@ article .icon::before {
         transform: translateY(calc(0em - (var(--bigTitleSize)  * var(--animatedSetCount))));
     }
 }
+
+@layer objects {
 .animation--setSlidesUp {
     --animatedSetItemHeight: calc(var(--biggestTitleSize) * 1.2);
     --animatedSetCount: 5;
@@ -226,4 +230,5 @@ article .icon::before {
     animation-duration: var(--animatedSetDelay)
     animation-iteration-count: var(--animatedSetCount);
     animation-timing-function: ease-out;
+}
 }

@@ -1,3 +1,4 @@
+@layer components {
 /*====================
     GLOBAL COMPONENTS
 ====================*/
@@ -170,4 +171,5 @@
 
 .g-main {
     flex-direction: column;
+}
 }

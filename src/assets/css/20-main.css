@@ -9,6 +9,7 @@
   }
 }
 
+@layer layout {
 :root {
   --gridRail: 2%;
   --globalColumns: 3;
@@ -52,4 +53,5 @@ body {
 .g-main {
     display: flex;
 
+}
 }
