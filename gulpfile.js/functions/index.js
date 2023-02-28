@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /**
 * DO NOT MODIFY. See Readme for details.
 */

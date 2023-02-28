@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
-
 const { src, dest } = require('gulp');
 const sitemap = require('gulp-sitemap');
 const config = require('../config').sitemap;
