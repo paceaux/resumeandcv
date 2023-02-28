@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file */
+// too lazy to actually incorporate a js build setup for an incredibly inline joke
 const regMsgStyle = 'font-family: Helvetica; font-weight: bold; color: #333;';
 const bigMsgStyle = `${regMsgStyle} font-size: 4em;`;
 
