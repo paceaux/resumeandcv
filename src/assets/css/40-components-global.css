@@ -131,9 +131,8 @@
   }
 
   .g-footer__links {
-    display: flex;
     grid-area: links;
-    justify-content: space-evenly;
+    text-align: center;
   }
 
   .g-footer__link {
@@ -150,8 +149,7 @@
       text-align: left;
     }
     .g-footer__links {
-      align-items: center;
-      justify-content: flex-end;
+      text-align: right;
     }
   }
   /* ===============
@@ -168,5 +166,15 @@
 
   .g-main {
     flex-direction: column;
+  }
+  /* ===============
+      #GlOBAL #SECTION #HEADER
+      .s-header
+        __title
+        __content
+  =============== */
+
+  .s-header__content a {
+    font-weight: bold;
   }
 }

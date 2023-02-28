@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const { series, parallel } = require('gulp');
 
 const {
