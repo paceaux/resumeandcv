@@ -131,8 +131,8 @@
   }
 
   .g-footer__links {
-    text-align: center;
     grid-area: links;
+    text-align: center;
   }
 
   .g-footer__link {
