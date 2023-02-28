@@ -85,6 +85,14 @@
     font-weight: 700;
   }
 
+  .position__brag a {
+    border-bottom-color: var(--baseLinkColor);
+  }
+
+  .position__brag a:focus {
+    border-bottom-style: solid;
+  }
+
   .position:nth-of-type(2) {
     --textSize: 0.9em;
   }
@@ -226,12 +234,25 @@
     text-decoration-thickness: 1.5px;
   }
 
-  .portfolioItem__repoLink {
-    margin: 0.618rem;
+  .portfolioItem__description a {
+    border-bottom-color: var(--baseLinkColor);
   }
 
-  .portfolioItem__repoLink:is(:hover, :focus) {
+  .portfolioItem__description a:focus {
+    border-bottom-style: solid;
+  }
+
+  .portfolioItem__repoLink {
+    margin: 0.618rem;
+    font-weight: bold;
+  }
+
+  .portfolioItem__repoLink:hover {
     border-bottom-color: transparent;
+  }
+
+  .portfolioItem__repoLink:focus {
+    border-bottom-style: solid;
   }
 
   .portfolioItem__description li {

@@ -169,4 +169,14 @@
   .g-main {
     flex-direction: column;
   }
+  /* ===============
+      #GlOBAL #SECTION #HEADER
+      .s-header
+        __title
+        __content
+  =============== */
+
+  .s-header__content a {
+    font-weight: bold;
+  }
 }
