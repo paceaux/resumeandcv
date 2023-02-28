@@ -1,12 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
-
 const assemble = require('assemble');
 const extname = require('gulp-extname');
 const config = require('../config').assemble;
 
 const assembler = assemble();
-
 
 // gulp.task('load', (cb) => {
 //     assembler.data(config.content);

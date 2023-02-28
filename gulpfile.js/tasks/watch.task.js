@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
-
 const { watch, series } = require('gulp');
 const config = require('../config').watch;
 

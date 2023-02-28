@@ -1,6 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /**
-* DO NOT MODIFY. See Readme for details.
-*/
+ * DO NOT MODIFY. See Readme for details.
+ */
 const taskFiles = require('require-dir')();
 
 const tasks = {};
