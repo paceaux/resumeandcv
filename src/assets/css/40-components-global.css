@@ -36,10 +36,25 @@
   }
 
   .g-header__title {
-    padding: 5px 10px;
-    margin-bottom: 0;
-    border: 5px solid;
+    text-align: center;
     line-height: 1;
+    padding: 5px 10px;
+    border: 5px solid;
+    margin-bottom: 0;
+  }
+  
+  @media screen and (min-width: 768px ) {
+    .g-header__title {      
+      text-align: left;
+      display: inline-block;
+    }
+  }
+
+  .g-header__subtitles {
+    font-family: var(--titleFontFamily);
+    font-weight: var(--heaviestFontWeight);
+    font-size: var(--bigTitleSize);
+    line-height: var(--smallLineHeight);
   }
 
   .g-header__subtitleList {
@@ -53,6 +68,7 @@
 
   .g-header__titleLink {
     color: inherit;
+    border-bottom: none;
   }
 
   .g-header__titleLink:is(:hover, :focus, :active) {
@@ -91,9 +107,9 @@
 
 
   .g-nav__listItem {
-    margin: 0.618em 1rem 0 0;
-    line-height: 1;
     text-align: right;
+    line-height: 1;
+    margin: 0.618em 1rem 0 0;
   }
 
   @media screen and (min-width: 768px) {

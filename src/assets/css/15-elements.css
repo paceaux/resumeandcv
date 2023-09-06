@@ -4,466 +4,549 @@
 */
 @layer elements {
   :root {
-    /* Color Palette
-        Variables follow convention found here: https://codepen.io/paceaux/pen/XdxQza
-        Color is a dark, dark gray rgb (55, 55, 55). All grays and base line styles are multiples of this
-        Using a "base value", all colors are a multiple of 55
-    */
-    --colorNeutralDarkest: rgb(55, 55, 55);
-    --colorNeutralDarker: rgb(55, 55, 55);                    /* base:           #373737;    hsl(22%, 22%, 22%) */
-    --colorNeutralDark: rgb(110, 110, 110);                   /*  base * 2:  #6e6e6e;      hsl(0, 0%, 43%) */
-    --colorNeutral: rgb(165, 165, 165);                       /* base * 3:   #a5a5a5;      hsl(0, 0%, 65%) */
-    --colorNeutralLight: rgb(192.5, 192.5, 192.5);            /* base * 3.5: #c1c1c1;      hsl(0, 0%, 75%) */
-    --colorNeutralLighter: rgb(220, 220, 220);                /*  base * 4:    #dcdcdc;       hsl(0, 0%, 86%) */
-    --colorCool: hsl(210deg, 61%, 46%);                      /*   #6ea5dc; hsl(210, 61%, 46%);  */
-    --colorCoolDarker: hsl(210deg, 61%, 36%);                   /* #6ea5c1;  hsl (200,40%,59%) */
+/* ===== 
+    #Color #Palette #Variables
+    Variables follow convention found here: https://codepen.io/paceaux/pen/XdxQza
+    Color is a very dark gray:  rgb (31, 31, 31). Grays are multiples of 31. 
+    The NeutralDarker gray passes WCAGAA for contrast against a light background
+===== */
+    --colorNeutralDarkest: rgb(20, 20, 20);
+    --colorNeutralDarker: rgb(31, 31, 31);              /* #1f1f1f; hsl(0%, 0%, 12%) */
+    --colorNeutralDark: rgb(62, 62, 62);                /* #5d5d5d; hsl(0, 0%, 36%) */
+    --colorNeutral: rgb(155, 155, 155);                 /* #9b9b9b; hsl(0, 0%, 61%) */
+    --colorNeutralLight: rgb(186, 186, 186);            /* #bababa; hsl(0, 0%, 73%) */
+    --colorNeutralLighter: rgb(217, 217, 217);          /* #d9d9d9; hsl(0, 0%, 85%) */
 
-    /*  Colors
-        Variables follow convention found here: https://gist.github.com/paceaux/8638765e747f5bd6387b721cde99e066#sassscssstylus-naming
+    /*
+     These colors pass WCAG 2.1 for contrast against a light background and the NeutralDarker gray
+     Before you change them, check your contrast ratios:  https://webaim.org/resources/linkcontrastchecker/
     */
+    --colorCool: hsl(210deg, 61%, 46%);                      /*   #6ea5dc; hsl(210, 61%, 46%);  */
+    --colorCoolDarker: hsl(210deg, 61%, 36%); 
+    --colorCoolerLight: rgb(93, 124, 217);
+    --colorCooler: rgb(62, 93, 155);
+    --colorCoolerDark: rgb(31, 62, 124);
+    --colorCoolest: rgb(93, 186, 63);
+
+/* ===== 
+    #Color #Link #Border #Variables
+    Variables follow convention found here: https://gist.github.com/paceaux/8638765e747f5bd6387b721cde99e066#sassscssstylus-naming
+===== */
     --baseTextColor: var(--colorNeutralDarker);
     --baseEditorialTextColor: var(--colorNeutralDark);
     --baseLinkColor: var(--colorCool);
     --baseLinkColorHover: var(--colorCoolDarker);
     --baseInlineBorderColor: var(--colorNeutralLight);
+    --baseTextLineColor: var(--baseTextColor);
+    --alertTextLineColor: rgb(255, 0, 0);
+    --baseQuoteBackgroundColor: 155, 155, 155, ; /* Same as colorNeutral */
 
-    /* Line Heights */
+/* ===== 
+    #LineHeight #Variables
+===== */
     --baseLineHeight: 1.618;
     --smallLineHeight: 1.2;
 
-    /* text (body copy) */
-    --biggestTextSize: 1.3em;
+/* ===== 
+    #Body #Size #Paragraph #content-flow #Variables
+===== */
+    --biggestTextSize:  1.3em;
     --biggerTextSize: 1.2em;
     --bigTextSize: 1.1em;
     --baseTextSize: 1em;
-    --smallTextSize: 0.8em;
-    --smallerTextSize: 0.75em;
-    --smallestTextSize: 0.618em;
+    --smallTextSize: .8em;
+    --smallerTextSize: .75em;
+    --smallestTextSize: .618em;
 
-    /* text (titles)
-            The small title sizes use the big text sizes; so they overlap
-            They're here, though, so that, if desired, we can deviate and not have them overlap
-    */
+/* ===== 
+    #Heading #Title #Size #Variables
+    The small title sizes use the big text sizes; so they overlap
+    They're here, though, so that, if desired, we can deviate and not have them overlap
+===== */
     --biggestTitleSize: 2.6179em; /* (16 x 1.618) x 1.618 */
     --bigTitleSize: 1.618em;
     --baseTitleSize: 1.5em;
     --smallTitleSize: var(--biggestTextSize);
     --smallerTitleSize: var(--biggerTextSize);
     --smallestTitleSize: var(--bigTextSize);
-    --fontFamilyTitle: Helvetica, Arial, sans-serif;
-    --fontFamilyBase: Georgia, 'Times New Roman', serif;
-  }
 
-  html {
-    font-size: calc(0.5vw + 1rem); /* the font-size can scale up as the browser window gets larger, but doesn't get hard to read when the browser window shrinks */
-    line-height: 1.168;
-    line-height: var(--baseLineHeight);
-    font-family: var(--fontFamilyBase);
-    color: #373737;
+/* ===== 
+    #Spacing #Text #Size #Variables
+    rem for left-right, for consistent alignment.
+    em for top/bottom, so the spacing is relative to font-size  
+===== */
+    --bigSpacingHorizontal: 1.618rem;
+    --baseSpacingHorizontal: .618rem;
+    --bigSpacingVertical: 1.618em;
+    --baseSpacingVertical: .618em;
+
+/* ===== 
+    #Font #FontFamilies #Typeface #Code #Heading #Paragraphs #Variables
+    base is meant to be what's applied to the majority of body copy
+    title could also be called "headline", but would be  w/ other vars
+===== */
+    --baseFontFamily: georgia, "Times New Roman", serif;
+    --titleFontFamily: helvetica, arial, sans-serif;
+    --codeFontFamily: monospace;
+
+/* ===== 
+    #Font #Weight #Variables
+    though font-weight ranges from 100 - 900, "normal" is 400 and the ends
+         are a difference of 300 .
+    So the "est" weights are the extremes, with room to add 
+        light, lighter, heavy, heavier. 
+    Recommend adding "ultra" if the weight is > 700
+===== */
+    --lightestFontWeight: 100;
+    --baseFontWeight: 400;
+    --heaviestFontWeight: 700;
+
+/* ===== 
+    #font #style #Variables
+    Oblique will use the existing font and put the glyphs at an angle
+    Alternate will look for a font labelled with an italic face
+    If the browser doesn't have a labelled italic font, it synthesizes oblique
+===== */
+    --shiftedFontVoice: oblique 15deg;
+    --baseFontVoice: normal;
+    --alternateFontVoice: italic;
+
+/* ===== 
+    #font #quotes #border #Variables
+    These are the default quotes for English. Change these quotes-as needed for other languages
+    "secondary" quotes are nested quotes. e.g. <blockquote><blockquote>
+    the CSS properties 'open-quote', 'close-quote' will use the primary open and primary close quotes listed here
+===== */
+    --baseTextQuotes: "\201C""\201D""\2018""\2019"; /* Primary open, primary close, secondary open, secondary close */
+    --baseQuoteBorder: 10px solid var(--colorNeutralLighter);
+    --smallQuoteBorder: 5px solid var(--colorNeutralLight);
+
+/* ===== 
+    #font #text #interactions #Variables
+    Interactions could/should include
+        idle: not being used, but an indicator that it can be
+        interest: a user has shown desire to interact (e.g. hover or focus)
+        active: a user is currently interacting
+===== */
+    --idleTextLineStyle: dotted;
+    --interestTextLineStyle: solid;
+    --activeTextLineStyle: solid;
+    --idleTextDecoration: var(--idleTextLineStyle) underline 2px;
+}
+
+html {
     color: var(--baseTextColor);
-  }
+    font-family: var(--baseFontFamily);
+    font-size: calc(.5vw + 1rem); /* the font-size can scale up as the browser window gets larger, but doesn't get hard to read when the browser window shrinks */
+    line-height: var(--baseLineHeight);
+}
 
 
-  /* =====
+/* =====
   #Everything
 ===== */
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul,
-  ol,
-  dl,
-  pre {
-    margin: 0 0.618rem 0 0.618rem; /* Comment-A */
-    line-height: 1.618;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+pre {
     line-height: var(--baseLineHeight);
-  }
+    margin: 0 var(--baseSpacingHorizontal);
+}
 
 
-  /* =====
+/* =====
   #Headings
 ===== */
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-bottom: calc(1.618vmin - 1vmax + 0.35em); /* increases margin as screen width gets smaller */
-    line-height: 1.2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--titleFontFamily);
+    font-weight: var(--heaviestFontWeight);
     line-height: var(--smallLineHeight);
-    font-family: var(--fontFamilyTitle);
-    font-weight: bold;
-  }
+    margin-bottom: calc(1.618vmin - 1vmax + .35em); /* increases margin as screen width gets smaller */
+}
 
-  h1 {
-    font-size: 2.6179em;
+h1 {
     font-size: var(--biggestTitleSize);
-  }
+}
 
-  h2 {
-    font-size: 1.618em;
+h2 {
     font-size: var(--bigTitleSize);
-  }
+}
 
-  h3 {
-    font-size: 1.5em;
+h3 {
     font-size: var(--baseTitleSize);
-  }
+}
 
-  h4 {
-    font-size: 1.3em;
+h4 {
     font-size: var(--smallTitleSize);
-  }
+}
 
-  h5 {
-    font-size: 1.2em;
+h5 {
     font-size: var(--smallerTitleSize);
-  }
+}
 
-  h6 {
-    font-size: 1.1em;
+h6 {
     font-size: var(--smallestTitleSize);
-  }
+}
 
 
-  /* =====
+/* =====
   #Lists
 ===== */
 
-  ul,
-  ol,
-  dl {
-    padding: 0.618em 0.618rem; /* Comment-A */
-  }
+ul,
+ol,
+dl,
+menu {
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+}
 
-  li {
-    padding: 0;
-    margin: 0 0 0 0.618rem;
-    line-height: 1.618;
+li {
+    list-style-position: inside;
+    text-indent: -.9em; /* this brings the left text aligned with the text of a <dd> element */
     line-height: var(--baseLineHeight);
-  }
+    padding: 0;
+    margin: 0 0 0 var(--baseSpacingHorizontal);
+}
 
-  li {
-    list-style-position: outside;
-  }
-
-  dt {
-    text-indent: -0.618rem;
-  }
-
-  dd {
-    padding: 0 0.618rem 0 0.618rem;
+nav li,
+menu li {
+    list-style-type: none;
+    text-indent: 0;
     margin: 0;
-  }
+}
+
+dt {
+    text-indent: calc(-1 * var(--baseSpacingHorizontal));
+}
+
+dd {
+    padding: 0 var(--baseSpacingHorizontal);
+    margin: 0;
+}
 
 
-  /* =====
+/* =====
   #Paragraphs #Blocks
 ===== */
 
-  hr {
-    margin: 1.618em 0.618rem;
-    border-width: 0.0625em;
-    border-style: solid;
-    color: #a5a5a5;
+hr {
     color: var(--colorNeutral);
-  }
+    border-width: .0625em;
+    border-style: solid;
+    margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
+}
 
-  p,
-  blockquote {
-    line-height: 1.618;
+p,
+blockquote {
     line-height: var(--baseLineHeight);
-  }
+}
 
-  p {
-    margin-bottom: 0.618em;
-    font-size: 1em;
+p {
     font-size: var(--baseTextSize);
-  }
+    margin-bottom: var(--baseSpacingVertical);
+}
 
+blockquote,
+q {
+    quotes: var(--baseTextQuotes);
+}
 
-  /* Credit where it's due:
-https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
-*/
-  blockquote {
-    quotes: '\201C''\201D''\2018''\2019';
-    padding: 0.618em 0.618rem;
-    margin: 1.618em 0.618rem; /* Comment-A */
-    border-left: 10px solid#dcdcdc;
-    border-left: 10px solid var(--colorNeutralLighter);
-    background: rgba(165, 165, 165, 0.15);
-  }
-
-  blockquote::before {
+blockquote::before,
+q::before {
     content: open-quote;
-    margin-right: 0.25em;
+}
+
+/* Credit where it's due:
+    https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+*/
+blockquote {
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+    border-left: var(--baseQuoteBorder);
+    background: rgba(var(--baseQuoteBackgroundColor) 0.15);
+    margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
+}
+
+blockquote::before,
+blockquote::after {
+    color: var(--colorNeutralDark); /* Any lighter and it won't pass WCAG AA */
+    vertical-align: -0.5em;
     font-size: 4em;
     line-height: 0.1em;
-    color: #c1c1c1;
-    color: var(--colorNeutralLight);
-    vertical-align: -0.4em;
-  }
+}
+
+blockquote::before {
+    margin-right: var(--baseSpacingHorizontal);
+}
+
+blockquote::after {
+    content: no-close-quote;
+}
+
+q::after {
+    content: close-quote;
+}
 
 
-  /* =====
+/* =====
   #Content-Flow
 ===== */
 
-  em,
-  i,
-  cite {
-    font-style: italic;
-  }
+em,
+i,
+cite {
+    font-style: var(--alternateFontVoice);
+}
 
-  strong,
-  b {
-    font-weight: 700;
-  }
+strong,
+b {
+    font-weight: var(--heaviestFontWeight);
+}
 
-  cite {
+cite {
     display: block;
     text-align: right;
-  }
+}
 
-  u {
-    border-bottom: 1px dotted red;
-    text-decoration: none;
-  }
-
-  small,
-  sub,
-  sup {
-    font-size: 0.618em;
+small,
+sub,
+sup {
     font-size: var(--smallestTextSize);
     line-height: 1;
-  }
+}
 
-  sub {
+sub {
     vertical-align: sub;
-  }
+}
 
-  sup {
+sup {
     vertical-align: super;
-  }
+}
 
 
-  /* =====
-  #content-flow #editorial
+/* =====
+  #Content-Flow #editorial
 ===== */
 
-  s,
-  strike,
-  del,
-  ins {
-    color: #6e6e6e;
+s,
+strike,
+del,
+ins {
     color: var(--baseEditorialTextColor);
-  }
+}
 
-  s,
-  strike,
-  del {
-    text-decoration: strikethrough;
-  }
+s,
+strike,
+del {
+    text-decoration: line-through;
+}
 
-  ins,
-  del {
-    background-color: rgba(220, 220, 220, 0.25);
-  }
+ins,
+del {
+    background-color: rgba(217, 217, 217, 0.25);
+}
 
-  ins {
+ins {
     text-decoration: none;
-  }
+}
 
+/* U is for misspelled words. Invite user to make a correction */
+u {
+    text-decoration: var(--idleTextDecoration);
+    text-decoration-color: var(--alertTextLineColor);
+}
 
-  /*
-mark and selection should be different, so user knows which one they've selected.
-
-mark and selections:
-  saturation: 44%
-  lightness: 75%
-Hue is different
+/*
+mark and selection should be different so user knows which one they've selected.
 */
 
-  mark {
-    background-color: rgba(165, 220, 165, 0.9);
-  }
+/* hue: 120, saturation: 45%, lightness: 73%  */
+mark {
+    background-color: rgba(155, 217, 155, 0.9);
+}
 
-  ::selection {
-    background-color: rgba(165, 220, 220, 0.9);
-  }
+/* hue: 180, saturation: 45%, lightness: 73% */
+::selection {
+    background-color: rgba(155, 217, 217, 0.9);
+}
 
-  /* because mark and selection have same saturation, brightenss, mark won't easily stand out if it's selected */
-  mark::selection {
-    background-color: rgba(165, 220, 110, 0.9);
-  }
+/* Because mark and selection have same saturation and brightness, a selected <mark> won't stand out
+    A hue between 120 and 180 seems to stand out the best in all colorblind tests, too
+    hue: 150, saturation: 44%, lightness: 65%
+ */
+mark::selection {
+    background-color: rgba(126, 205, 166, 0.9);
+}
 
-  /* dfn and dt both do the same thing: denote a term to be defined */
-  dfn,
-  dt {
-    font-weight: 700;
-    font-style: oblique;
+/* dfn and dt both do the same thing: denote a term to be defined */
+dfn,
+dt {
+    font-weight: var(--heaviestFontWeight);
+    font-style: var(--shiftedFontVoice);
     text-transform: capitalize;
-  }
+}
+
+abbr {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* an abbreviation with a title should invite a user to hover over it */
+abbr[title] {
+    text-decoration: var(--idleTextDecoration);
+}
 
 
-  /* =====
+/* =====
 #Content-flow #Code
 ===== */
 
-  pre,
-  code,
-  var,
-  samp,
-  data {
-    font-family: monospace;
-  }
+pre,
+code,
+var,
+samp,
+data {
+    font-family: var(--codeFontFamily);
+}
 
-  kbd,
-  samp,
-  data {
-    background-color: rgba(165, 165, 165, 0.2);
-  }
+kbd,
+samp,
+data {
+    background-color: rgba(var(--baseQuoteBackgroundColor) 0.2);
+}
 
-  kbd {
-    padding: 0.25ex 0.5ex;
-    border: 1px solid #c1c1c1;
+kbd {
+    font-size: var(--smallerTextSize);
+    padding: .25ex .5ex;
     border: 1px solid  var(--baseInlineBorderColor);
     border-radius: 3px;
-    font-size: 0.75em;
-    font-size: var(--smallerTextSize);
-  }
+}
 
-  /* Treat samp like a mini blockquote. because basically you're quoting what the computer would do */
-  samp,
-  data {
+/* Treat samp like a mini blockquote. because basically you're quoting what the computer would do */
+samp,
+data {
     padding: 0 10px;
-  }
+}
 
-  var,
-  data {
-    font-style: italic;
-  }
+var,
+data {
+    font-style: var(--alternateFontVoice);
+}
 
-  samp {
-    border-left: 5px solid #c1c1c1;
-    border-left: 5px solid var(--baseInlineBorderColor);
-  }
+samp {
+    border-left: var(--smallQuoteBorder);
+}
 
-  data {
-    padding: 0 10px;
-  }
-
-  pre {
+pre {
     overflow: scroll;
-    padding: 0.618em 0.618rem;
-    border: 1px solid #c1c1c1;
+    font-size: var(--smallerTextSize);
+    line-height: var(--smallLineHeight);
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
     border: 1px solid var(--baseInlineBorderColor);
     border-radius: 2px;
-    font-size: 0.75em;
-    font-size: var(--smallerTextSize);
-    line-height: 1.2;
-    line-height: var(--smallLineHeight);
-  }
+}
 
 
-  /* =====
+/* =====
   #Ruby
 ===== */
 
-  ruby {
+ruby {
     position: relative;
     display: ruby;
-    margin: 0 0.5ex;
+    margin:0 .5ex;
     -webkit-ruby-position: before;
     ruby-position: over;
     ruby-position: before;
-  }
+}
 
-  rtc {
+rtc, rbc {
     font-size: inherit;
     line-height: 1;
     ruby-align: start;
-  }
+}
 
-  rt {
+rt {
     display: ruby-text;
-    font-size: 0.7em;
-  }
+    font-size: .7em;
+}
 
-  rt + rt {
-    margin-left: 0.5ex;
-  }
+rt + rt {
+    margin-left: .5ex;
+}
 
-  rtc > bdo {
+rtc > bdo {
     display: -webkit-ruby-text-container;
     display: ruby-base-container;
-  }
+}
 
-  /* complex ruby for chrome and Edge */
-  /* only FF has "complete" ruby support */
-  @supports (ruby-align: left) or ( not (display:ruby-base-container)) {
+/* complex ruby for chrome and Edge */
 
+/* only FF has "complete" ruby support */
+@supports (ruby-align: left) or ( not (display:ruby-base-container))  {
     ruby {
-      display: inline-flex;
-      flex-direction: column;
-      line-height: 1;
-      vertical-align: 1em;
+        display:inline-flex;
+        vertical-align: 1em;
+        line-height: 1;
+        flex-direction: column;
     }
 
-    rtc,
-    rt {
-      order: -1;
-      flex-grow: 1;
-      flex-shrink: 0;
+    rtc, rt {
+        order: -1;
+        flex-grow: 1;
+        flex-shrink: 0;
     }
 
     rtc {
-      display: inline-flex;
+        display: inline-flex;
     }
-  }
+}
 
-  /* Edge fixes */
-  @supports ((ruby-align: left)) {
-
+/* Edge fixes */
+@supports  ((ruby-align: left)) {
     rtc {
-      justify-content: space-between;
+        justify-content: space-between;
     }
 
     rt {
-      display: inline-flex;
+        display: inline-flex;
     }
-  }
+}
 
 
-  /* =====
+/* =====
 #Links
 ===== */
 
-  a {
-    border-bottom: 1px dotted transparent;
-    color: #6ea5dc;
+a {
     color: var(--baseLinkColor);
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
-  }
+    border-bottom: 1px var(--idleTextLineStyle);
+    transition: all .3s ease-in-out;
+}
 
-  a:hover,
-  a:focus {
-    border-color: #6ea5c1;
-    border-color: var(--baseLinkColorHover);
-    outline: none;
-    color: #6ea5c1;
+a:hover,
+a:focus {
     color: var(--baseLinkColorHover);
-  }
+    border-bottom-style: var(--interestTextLineStyle);
+    outline: none;
+}
 
-  a:active {
-    border-style: solid;
-  }
+a:active {
+    border-bottom-style: var(--activeTextLineStyle);
+}
+
 }

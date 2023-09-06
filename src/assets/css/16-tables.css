@@ -124,15 +124,15 @@ we have the ability to change styles by changing values of the variables
 #Table
 ===== */
   table {
-    border-collapse: var(--tableBorderCollapse);
-    font-family: var(--tableBaseFontFamily);
     color: var(--tableBaseTextColor);
+    font-family: var(--tableBaseFontFamily);
+    border-collapse: var(--tableBorderCollapse);
   }
 
   caption {
-    font-size: var(--tableSmallestTextSize);
     font-style: var(--tableCaptionFontStyle);
     text-transform: var(--tableCaptionTransform);
+    font-size: var(--tableSmallestTextSize);
   }
 
 
@@ -141,12 +141,12 @@ we have the ability to change styles by changing values of the variables
 ===== */
   th,
   td {
+    text-align: var(--tableTextAlign);
+    vertical-align: var(--tableVertAlign);
+    line-height: var(--tableBaseLineHeight);
     padding: var(--tableCellVertPadding);
     border-style: var(--tableBorderStyle);
     border-color: var(--tableBorderColor);
-    line-height: var(--tableBaseLineHeight);
-    text-align: var(--tableTextAlign);
-    vertical-align: var(--tableVertAlign);
   }
 
   th:empty,
@@ -156,21 +156,21 @@ we have the ability to change styles by changing values of the variables
   }
 
   td {
-    border-width: var(--borderWidth);
     font-size: var(--tableCellSize);
+    border-width: var(--borderWidth);
   }
 
   th {
-    border-width: var(--tableHeaderBorderWidth);
-    font-size: var(--tableHeaderSize);
     font-family: var(--tableTitleFontFamily);
     font-weight: bold;
+    font-size: var(--tableHeaderSize);
+    border-width: var(--tableHeaderBorderWidth);
   }
 
   th[scope='rowgroup'] {
+    font-size: var(--tableBiggestTitleSize);
     padding: var(--tableCellVertPadding);
     border-width: 0;
-    font-size: var(--tableBiggestTitleSize);
   }
 
   thead th {
