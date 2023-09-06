@@ -54,16 +54,16 @@
   .position {
     --textSize: inherit;
 
-    padding: 0.5rem 0 0 0.618rem;
-    margin: 0.5rem 0 0 1rem;
-    border-radius: 5px;
     font-size: var(--textSize);
+    padding: 0.5rem 0 0 0.618rem;
+    border-radius: 5px;
     background-color: rgba(220, 220, 220, 0.2);
+    margin: 0.5rem 0 0 1rem;
   }
 
   .position__header {
-    border-bottom: 0.25em solid var(--colorNeutralDarkest);
     font-size: 0.618em;
+    border-bottom: 0.25em solid var(--colorNeutralDarkest);
   }
 
   @media screen and (min-width: 768px) {
@@ -80,9 +80,9 @@
   }
 
   .position__brag {
+    font-weight: 700;
     padding-left: 0;
     margin-left: 0;
-    font-weight: 700;
   }
 
   .position__brag a {
@@ -157,9 +157,9 @@
   }
 
   .portfolio__sectionLink {
+    color: inherit;
     width: 100%;
     border-bottom: none;
-    color: inherit;
   }
 
   .portfolio__sectionLink:is(:hover, :focus) {
@@ -187,9 +187,9 @@
   }
 
   .portfolio__codeLinks .list--links {
-    flex-direction: column;
-    padding: 0;
     color: transparent;
+    padding: 0;
+    flex-direction: column;
   }
 
   .portfolio__codeLinks .list__item {
@@ -216,16 +216,16 @@
 */
   .portfolioItem {
     display: flex;
+    font-size: 0.7em;
+    padding: 0.618em 0 0 0;
+    border-radius: 2px;
+    background: rgba(110, 165, 193, 0.08);
+    margin: 1.618em 1.618rem;
     flex-direction: column;
     flex-basis: 40%;
     flex-grow: 1;
     flex-shrink: 0;
     justify-content: space-between;
-    padding: 0.618em 0 0 0;
-    margin: 1.618em 1.618rem;
-    border-radius: 2px;
-    font-size: 0.7em;
-    background: rgba(110, 165, 193, 0.08);
   }
 
   .portfolioItem__title {
@@ -243,8 +243,8 @@
   }
 
   .portfolioItem__repoLink {
-    margin: 0.618rem;
     font-weight: bold;
+    margin: 0.618rem;
   }
 
   .portfolioItem__repoLink:hover {
@@ -262,9 +262,9 @@
   .portfolioItem__demo {
     width: 98%;
     min-height: 600px;
-    margin: 0 auto;
     border: none;
     background: #fff;
+    margin: 0 auto;
     box-shadow: 0 0 1px 1px rgba(55, 55, 55, 0.4);
   }
 
