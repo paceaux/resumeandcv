@@ -36,10 +36,18 @@
   }
 
   .g-header__title {
+    text-align: center;
     line-height: 1;
     padding: 5px 10px;
     border: 5px solid;
     margin-bottom: 0;
+  }
+  
+  @media screen and (min-width: 768px ) {
+    .g-header__title {      
+      text-align: left;
+      display: inline-block;
+    }
   }
 
   .g-header__subtitles {
