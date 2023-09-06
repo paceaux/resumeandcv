@@ -88,13 +88,21 @@
     margin-left: 0;
   }
 
+  .list--links .list__item {
+    text-indent: 0;
+  }
+
   .list--links .list__itemLink {
     color: inherit;
+    border-bottom:none;
   }
 
   .list--links .list__itemLink:is(:hover, :focus) {
     color: var(--colorNeutralDarker);
-    border-bottom: 1px solid transparent;
+  }
+
+  .list--links .list__itemLink:focus {
+    outline: 1px dotted;
   }
 
 
@@ -135,6 +143,10 @@
       max-width: 50%;
     }
   }
+
+.nav__listItem {
+  margin-left: var(--baseSpacingHorizontal)
+}
 
   /* ===============
     #icon

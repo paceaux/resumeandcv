@@ -243,16 +243,28 @@
   }
 
   .portfolioItem__repoLink {
+    align-self: flex-start;
     font-weight: bold;
     margin: 0.618rem;
   }
 
-  .portfolioItem__repoLink:hover {
-    border-bottom-color: transparent;
+  .portfolioItem__repoLink:is(:hover, :focus) {
+    border-bottom-style: solid;
   }
 
-  .portfolioItem__repoLink:focus {
-    border-bottom-style: solid;
+  .portfolioItem__repoLink::after {
+    content: '\21F0';
+    position: absolute;
+    display: inline-block;
+    color: transparent;
+    font-weight: normal;
+    margin-left: 0;
+    transition: color .15s ease-in-out, margin-left .25s ease-in-out;
+  }
+  
+  .portfolioItem__repoLink:is(:hover, :focus)::after {
+    color: inherit;
+    margin-left: var(--baseSpacingHorizontal);
   }
 
   .portfolioItem__description li {
