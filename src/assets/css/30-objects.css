@@ -54,13 +54,18 @@
 
   .lists__listContainer {
     font-size: 0.8em;
-    background: rgba(55, 110, 220, 0.1);
-    margin: 0.618em;
     flex-basis: 24%;
     flex-grow: 1;
     flex-shrink: 0;
+    border: 1px solid var(--colorCoolerLight);
+    border-radius: 4px;
+    margin: 0.618em;
   }
 
+  .list__title {
+    color: var(--colorCoolerDark);
+    margin-top: var(--baseSpacingVertical);
+  }
   /* === .list ===
     __item
     __itemLink

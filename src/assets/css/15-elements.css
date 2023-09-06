@@ -22,7 +22,11 @@
      Before you change them, check your contrast ratios:  https://webaim.org/resources/linkcontrastchecker/
     */
     --colorCool: hsl(210deg, 61%, 46%);                      /*   #6ea5dc; hsl(210, 61%, 46%);  */
-    --colorCoolDarker: hsl(210deg, 61%, 36%);                     /*  #2a6bac;  hsl(210, 61%, 41%) */
+    --colorCoolDarker: hsl(210deg, 61%, 36%); 
+    --colorCoolerLight: rgb(93, 124, 217);
+    --colorCooler: rgb(62, 93, 155);
+    --colorCoolerDark: rgb(31, 62, 124);
+    --colorCoolest: rgb(93, 186, 63);
 
 /* ===== 
     #Color #Link #Border #Variables
