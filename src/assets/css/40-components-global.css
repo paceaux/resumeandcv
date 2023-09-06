@@ -42,6 +42,13 @@
     margin-bottom: 0;
   }
 
+  .g-header__subtitles {
+    font-family: var(--titleFontFamily);
+    font-weight: var(--heaviestFontWeight);
+    font-size: var(--bigTitleSize);
+    line-height: var(--smallLineHeight);
+  }
+
   .g-header__subtitleList {
     display: block;
   }
