@@ -165,9 +165,20 @@
   .portfolio__sectionLink:is(:hover, :focus) {
     border-bottom: none;
   }
-
+  
   .portfolio__sectionTitle {
-    border-bottom: 4px solid var(--colorNeutralDarkest);
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--colorNeutralDarkest);
+    transition: all .3s ease-in-out;
+  }
+
+  .portfolio__sectionTitle:is(.portfolio__sectionLink > *) {
+    border-bottom-style:  var(--idleTextLineStyle);
+  }
+
+  .portfolio__sectionLink:is(:hover, :focus) .portfolio__sectionTitle {
+    border-bottom-style: var(--interestTextLineStyle);
   }
 
   .portfolio__sectionDescription {
@@ -226,12 +237,6 @@
     flex-grow: 1;
     flex-shrink: 0;
     justify-content: space-between;
-  }
-
-  .portfolioItem__title {
-    text-decoration: underline;
-    text-decoration-skip-ink: all;
-    text-decoration-thickness: 1.5px;
   }
 
   .portfolioItem__description a {

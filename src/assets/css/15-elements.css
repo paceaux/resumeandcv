@@ -10,6 +10,7 @@
     Color is a very dark gray:  rgb (31, 31, 31). Grays are multiples of 31. 
     The NeutralDarker gray passes WCAGAA for contrast against a light background
 ===== */
+    --colorNeutralDarkest: rgb(20, 20, 20);
     --colorNeutralDarker: rgb(31, 31, 31);              /* #1f1f1f; hsl(0%, 0%, 12%) */
     --colorNeutralDark: rgb(62, 62, 62);                /* #5d5d5d; hsl(0, 0%, 36%) */
     --colorNeutral: rgb(155, 155, 155);                 /* #9b9b9b; hsl(0, 0%, 61%) */
