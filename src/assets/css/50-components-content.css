@@ -324,4 +324,12 @@
   .icon[href*='blog']::before {
     background-image: url('/assets/img/blog.svg');
   }
+
+  .poison {
+    visibility: hidden;
+    overflow: hidden;
+    text-indent: -9999vw;
+    width: 0;
+    height: 0;
+  }
 }
