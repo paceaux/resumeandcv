@@ -74,6 +74,10 @@
     }
   }
 
+  .position__accomplishments  .list__item {
+    list-style-type: '\2794 \2003';
+    padding-left: var(--baseSpacingHorizontal);
+  }
 
   .position__responsibilities {
     font-size: 0.8em;
@@ -83,6 +87,11 @@
     font-weight: 700;
     padding-left: 0;
     margin-left: 0;
+  }
+
+  .position__brag .list__item {
+    list-style-type: '\1F389 \2003';
+    padding-left: var(--baseSpacingHorizontal);
   }
 
   .position__brag a {
@@ -323,5 +332,13 @@
 
   .icon[href*='blog']::before {
     background-image: url('/assets/img/blog.svg');
+  }
+
+  .poison {
+    visibility: hidden;
+    overflow: hidden;
+    text-indent: -9999vw;
+    width: 0;
+    height: 0;
   }
 }

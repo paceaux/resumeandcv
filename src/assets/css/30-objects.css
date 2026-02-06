@@ -93,6 +93,11 @@
     margin-left: 0;
   }
 
+  .list:empty,
+  .list__item:empty {
+    display: none;
+  }
+
   .list--links .list__item {
     text-indent: 0;
   }
