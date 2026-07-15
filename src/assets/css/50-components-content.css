@@ -334,6 +334,10 @@
     background-image: url('/assets/img/blog.svg');
   }
 
+  .icon[href*='bsky']::before {
+    background-image: url('/assets/img/bluesky.svg');
+  }
+
   .poison {
     visibility: hidden;
     overflow: hidden;
