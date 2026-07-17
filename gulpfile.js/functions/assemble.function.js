@@ -3,6 +3,7 @@
 const assemble = require('assemble');
 const extname = require('gulp-extname');
 const config = require('../config').assemble;
+const friendlyDate = require('../helpers/dateConverter.helper');
 
 const assembler = assemble();
 
@@ -26,6 +27,7 @@ function assemblePages() {
     assembler.partials(config.partials);
     assembler.layouts(config.layouts);
     assembler.pages(config.pages);
+    assembler.helper('friendlyDate', friendlyDate);
 
     return assembler.toStream('pages')
         .pipe(assembler.renderFile())
