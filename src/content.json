@@ -52,6 +52,47 @@
 			"NPM": "/portfolio/npm.html"
 		}
 	},
+	"workHistory": {
+		"redhat": {
+			"companyName": "Red Hat",
+			"companyUrl": "https://redhat.com",
+			"startDate": "2022-01"
+		},
+		"exlrt": {
+			"companyName": "EXLRT",
+			"companyUrl": "https://exlrt.com",
+			"startDate": "2019-02",
+			"endDate": "2022-1"
+		},
+		"tahzoo": {
+			"companyName": "Tahzoo",
+			"companyUrl": "https://tahzoo.com",
+			"startDate": "2011-08",
+			"endDate": "2019-02"
+		},
+		"childrens": {
+			"companyName": "Children's Medical Center",
+			"companyUrl": "https://childrens.com",
+			"startDate": "2010-7-01",
+			"endDate": "2011-08"
+		},
+		"mannatech": {
+			"companyName": "Mannatech",
+			"companyUrl": "https://mannatech.com",
+			"startDate": "2005-04",
+			"endDate": "2010-07"
+		},
+		"wepp": {
+			"companyName": "Water's Edge Pool and Porter",
+			"startDate": "2004-08",
+			"endDate": "2005-04"
+		},
+		"phl": {
+			"companyName": "PHL, International",
+			"startDate": "2004-06",
+			"endDate": "2004-08"
+		}
+	},
 	"google": {
 		"siteverification": "vWo1_L5-Zm535OiEDbNmkN5pI1GpSpHFI_T3Qpkmsvk",
 		"analytics" : "UA-19205705-1"
