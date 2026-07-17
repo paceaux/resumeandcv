@@ -93,6 +93,35 @@
 			"endDate": "2004-08"
 		}
 	},
+	"education": {
+		"siuc": {
+			"schoolName": "Southern Illinois University—Carbondale",
+			"schoolUrl": "http://siu.edu/",
+			"startDate": "1999-08",
+			"endDate": "2004-05",
+			"degrees": [
+				"Bachelor of Arts — French",
+				"Bachelor of Arts — Spanish"
+			]
+		},
+		"uop": {
+			"schoolName": "University of Phoenix",
+			"schoolUrl": "http://www.phoenix.edu/",
+			"startDate": "2015-06",
+			"endDate": "2016-06",
+			"degrees": [
+				"Programming Certificate"
+			]
+		},
+		"uoa": {
+			"schoolName": "University of Arizona",
+			"schoolUrl": "https://linguistics.arizona.edu/",
+			"startDate": "2015-06",
+			"degrees": [
+				"Master's of Science: Linguistics"
+			]
+		}
+	},
 	"google": {
 		"siteverification": "vWo1_L5-Zm535OiEDbNmkN5pI1GpSpHFI_T3Qpkmsvk",
 		"analytics" : "UA-19205705-1"
