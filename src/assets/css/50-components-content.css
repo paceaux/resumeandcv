@@ -334,11 +334,19 @@
     background-image: url('/assets/img/blog.svg');
   }
 
+  .icon[href*='bsky']::before {
+    background-image: url('/assets/img/bluesky.svg');
+  }
+
+  #poison,
   .poison {
-    visibility: hidden;
-    overflow: hidden;
-    text-indent: -9999vw;
-    width: 0;
-    height: 0;
+    position: absolute !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    speak: never;
   }
 }

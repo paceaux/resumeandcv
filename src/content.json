@@ -7,18 +7,18 @@
 			"CMS Consultant",
 			"Architect",
 			"JavaScript Engineer",
-			"Tridion Developer"
+			"Linguist"
 		]
 	},
 	"links": {
 		"code": {
 			"Stack Overflow": "http://stackoverflow.com/story/paceaux",
-			"JSFiddle": "https://jsfiddle.net/user/paceaux/",
+			"JSFiddle": "https://jsfiddle.net/u/Paceaux/fiddles/",
 			"CodePen": "http://codepen.io/paceaux/",
 			"Github": "https://github.com/paceaux"
 		},
 		"social": {
-			"Twitter": "http://twitter.com/paceaux",
+			"Bluesky": "https://bsky.app/profile/paceaux.com",
 			"LinkedIn": "https://www.linkedin.com/in/paceaux/",
 			"Blog": "http://blog.frankmtaylor.com",
 			"Quora": "https://quora.com/profile/Frank-Taylor-5"
@@ -26,7 +26,7 @@
 	},
 	"navigations": {
 		"work": {
-			"Red Hat": "/work-history/redhat.html",
+			"RedHat": "/work-history/redhat.html",
 			"Exlrt": "/work-history/exlrt.html",
 			"Tahzoo": "/work-history/tahzoo.html",
 			"Childrens": "/work-history/childrens.html",
@@ -50,6 +50,76 @@
 			"CSS" : "/portfolio/css.html",
 			"Browser Experiments": "/portfolio/browser-experiments.html",
 			"NPM": "/portfolio/npm.html"
+		}
+	},
+	"workHistory": {
+		"redhat": {
+			"companyName": "Red Hat",
+			"companyUrl": "https://redhat.com",
+			"startDate": "2022-01"
+		},
+		"exlrt": {
+			"companyName": "EXLRT",
+			"companyUrl": "https://exlrt.com",
+			"startDate": "2019-02",
+			"endDate": "2022-1"
+		},
+		"tahzoo": {
+			"companyName": "Tahzoo",
+			"companyUrl": "https://tahzoo.com",
+			"startDate": "2011-08",
+			"endDate": "2019-02"
+		},
+		"childrens": {
+			"companyName": "Children's Medical Center",
+			"companyUrl": "https://childrens.com",
+			"startDate": "2010-7-01",
+			"endDate": "2011-08"
+		},
+		"mannatech": {
+			"companyName": "Mannatech",
+			"companyUrl": "https://mannatech.com",
+			"startDate": "2005-04",
+			"endDate": "2010-07"
+		},
+		"wepp": {
+			"companyName": "Water's Edge Pool and Porter",
+			"startDate": "2004-08",
+			"endDate": "2005-04"
+		},
+		"phl": {
+			"companyName": "PHL, International",
+			"startDate": "2004-06",
+			"endDate": "2004-08"
+		}
+	},
+	"education": {
+		"siuc": {
+			"schoolName": "Southern Illinois University—Carbondale",
+			"schoolUrl": "http://siu.edu/",
+			"startDate": "1999-08",
+			"endDate": "2004-05",
+			"degrees": [
+				"Bachelor of Arts — French",
+				"Bachelor of Arts — Spanish"
+			]
+		},
+		"uop": {
+			"schoolName": "University of Phoenix",
+			"schoolUrl": "http://www.phoenix.edu/",
+			"startDate": "2015-06",
+			"endDate": "2016-06",
+			"degrees": [
+				"Programming Certificate"
+			]
+		},
+		"uoa": {
+			"schoolName": "University of Arizona",
+			"schoolUrl": "https://linguistics.arizona.edu/",
+			"startDate": "2015-06",
+			"degrees": [
+				"Master's of Science: Linguistics"
+			]
 		}
 	},
 	"google": {
